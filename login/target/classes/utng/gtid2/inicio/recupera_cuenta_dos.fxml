@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="utng.gtid2.inicio.RecuperaCuentaDos">
+   <children>
+      <Button fx:id="btnRegresar" layoutX="264.0" layoutY="200.0" mnemonicParsing="false" text="REGRESAR" 
+      onAction = "#regresar"/>
+      <Label layoutX="12.0" layoutY="31.0" prefHeight="71.0" prefWidth="574.0" text="GRACIAS POR SU ESPERA, PRONTO UN ADMINISTRADOR SE PONDRA EN COMUNICACION CON USTED" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnSalir" layoutX="279.0" layoutY="246.0" mnemonicParsing="false" text="SALIR" 
+      onAction = "#salir"/>
+   </children>
+</AnchorPane>

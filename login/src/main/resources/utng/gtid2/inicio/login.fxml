@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="utng.gtid2.inicio.Login">
+   <children>
+      <Label layoutX="199.0" layoutY="14.0" text="INICIAR SESION">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="txtContraseña" layoutX="219.0" layoutY="200.0" />
+      <TextField fx:id="txtUsuario" layoutX="219.0" layoutY="111.0" />
+      <Label layoutX="271.0" layoutY="92.0" text="USUARIO">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="257.0" layoutY="172.0" text="CONTRASEÑA" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAceptar" layoutX="181.0" layoutY="244.0" mnemonicParsing="false" text="ACPETAR" 
+      onAction="#aceptar"/>
+      <Button fx:id="btnSalir" layoutX="348.0" layoutY="244.0" mnemonicParsing="false" text="RECHAZAR" 
+      onAction="#salir"/>
+      <Label layoutX="218.0" layoutY="330.0" text="OLVIDÓ SU CONTRASEÑA?" />
+      <Button fx:id="btnReestablecer" layoutX="243.0" layoutY="349.0" mnemonicParsing="false" text="REESTABLECER"
+      onAction="#reestablecer"/>
+   </children>
+</AnchorPane>
