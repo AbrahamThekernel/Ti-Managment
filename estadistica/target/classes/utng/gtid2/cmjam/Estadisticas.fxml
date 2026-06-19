@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="rootPane" prefHeight="780.0" prefWidth="1140.0" style="-fx-background-color: #2b2b2b;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid2.cmjam.EstadisticasController">
+   <center>
+      <VBox style="-fx-background-color: #f3f3f3;" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+         </padding>
+
+         <!-- ===================== HEADER ===================== -->
+         <HBox alignment="CENTER_LEFT" spacing="12.0">
+            <children>
+               <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2b2b2b;" text="Estadísticas y Notificaciones" />
+               <HBox HBox.hgrow="ALWAYS" />
+               <Button fx:id="btnActualizar" mnemonicParsing="false" style="-fx-background-color: grey; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 4; -fx-padding: 8 18 8 18;" text="Volver" />
+               <Button fx:id="btnActualizar1" layoutX="1024.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: grey; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 4; -fx-padding: 8 18 8 18;" text="Actualizar" />
+            </children>
+            <VBox.margin>
+               <Insets bottom="16.0" />
+            </VBox.margin>
+         </HBox>
+
+         <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-background: transparent;" VBox.vgrow="ALWAYS">
+            <content>
+               <VBox spacing="16.0" style="-fx-background-color: transparent;">
+
+                  <!-- ===================== ESTADÍSTICAS GENERALES ===================== -->
+                  <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #d0d0d0; -fx-border-radius: 4; -fx-background-radius: 4;">
+                     <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="14.0" />
+                     </padding>
+                     <children>
+                        <Label style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #2b2b2b;" text="Estadísticas generales" />
+                        <Separator />
+
+                        <GridPane hgap="12.0" vgap="12.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="ALWAYS" percentWidth="25.0" />
+                              <ColumnConstraints hgrow="ALWAYS" percentWidth="25.0" />
+                              <ColumnConstraints hgrow="ALWAYS" percentWidth="25.0" />
+                              <ColumnConstraints hgrow="ALWAYS" percentWidth="25.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints />
+                           </rowConstraints>
+                           <children>
+
+                              <!-- Tarjeta: Total de equipos -->
+                              <VBox alignment="CENTER_LEFT" spacing="4.0" style="-fx-background-color: white; -fx-background-radius: 4; -fx-border-color: black; -fx-border-radius: 4;" GridPane.columnIndex="0">
+                                 <padding>
+                                    <Insets bottom="12.0" left="14.0" right="14.0" top="12.0" />
+                                 </padding>
+                                 <children>
+                                    <Label style="-fx-font-size: 12px; -fx-text-fill: #6b6b6b;" text="Total de equipos" />
+                                    <Label fx:id="lblTotalEquipos" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2b2b2b;" text="0" />
+                                 </children>
+                              </VBox>
+
+                              <!-- Tarjeta: Equipos activos -->
+                              <VBox alignment="CENTER_LEFT" spacing="4.0" style="-fx-background-color: white; -fx-background-radius: 4; -fx-border-color: black; -fx-border-radius: 4;" GridPane.columnIndex="1">
+                                 <padding>
+                                    <Insets bottom="12.0" left="14.0" right="14.0" top="12.0" />
+                                 </padding>
+                                 <children>
+                                    <Label style="-fx-font-size: 12px; -fx-text-fill: #6b6b6b;" text="Equipos activos" />
+                                    <Label fx:id="lblEquiposActivos" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2e8b4f;" text="0" />
+                                 </children>
+                              </VBox>
+
+                              <!-- Tarjeta: Equipos de baja -->
+                              <VBox alignment="CENTER_LEFT" spacing="4.0" style="-fx-background-color: white; -fx-background-radius: 4; -fx-border-color: black; -fx-border-radius: 4;" GridPane.columnIndex="2">
+                                 <padding>
+                                    <Insets bottom="12.0" left="14.0" right="14.0" top="12.0" />
+                                 </padding>
+                                 <children>
+                                    <Label style="-fx-font-size: 12px; -fx-text-fill: #6b6b6b;" text="Equipos de baja" />
+                                    <Label fx:id="lblEquiposBaja" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #c0392b;" text="0" />
+                                 </children>
+                              </VBox>
+
+                              <!-- Tarjeta: Mantenimientos pendientes -->
+                              <VBox alignment="CENTER_LEFT" spacing="4.0" style="-fx-background-color: white; -fx-background-radius: 4; -fx-border-color: black; -fx-border-radius: 4;" GridPane.columnIndex="3">
+                                 <padding>
+                                    <Insets bottom="12.0" left="14.0" right="14.0" top="12.0" />
+                                 </padding>
+                                 <children>
+                                    <Label style="-fx-font-size: 12px; -fx-text-fill: #6b6b6b;" text="Mantenimientos pendientes" />
+                                    <Label fx:id="lblMantenimientosPendientes" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #b7950b;" text="0" />
+                                 </children>
+                              </VBox>
+
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+
+                  <!-- ===================== FILA: NOTIFICACIONES + ALERTAS DE STOCK ===================== -->
+                  <HBox spacing="16.0">
+                     <children>
+
+                        <!-- NOTIFICACIONES -->
+                        <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #d0d0d0; -fx-border-radius: 4; -fx-background-radius: 4;" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets bottom="14.0" left="16.0" right="16.0" top="14.0" />
+                           </padding>
+                           <children>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                 <children>
+                                    <Label style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #2b2b2b;" text="Notificaciones" />
+                                    <HBox HBox.hgrow="ALWAYS" />
+                                    <Label fx:id="lblNotificacionesCount" style="-fx-background-color: green; -fx-text-fill: white; -fx-font-size: 11px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-padding: 2 9 2 9;" text="0" />
+                                 </children>
+                              </HBox>
+                              <Separator />
+
+                              <ListView fx:id="listNotificaciones" prefHeight="100.0" prefWidth="193.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" />
+
+                              <Button fx:id="btnVerTodasNotificaciones" mnemonicParsing="false" onAction="#abrirNotificacion" style="-fx-background-color: transparent; -fx-text-fill: #5b9bd5; -fx-font-weight: bold; -fx-cursor: hand;" text="Ver todas las notificaciones" />
+                           </children>
+                        </VBox>
+
+                        <!-- ALERTAS DE STOCK -->
+                        <VBox prefHeight="212.0" prefWidth="249.0" spacing="10.0" style="-fx-background-color: white; -fx-border-color: #d0d0d0; -fx-border-radius: 4; -fx-background-radius: 4;" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets bottom="14.0" left="16.0" right="16.0" top="14.0" />
+                           </padding>
+                           <children>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                 <children>
+                                    <Label style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #2b2b2b;" text="Alertas de stock" />
+                                    <HBox HBox.hgrow="ALWAYS" />
+                                    <Label fx:id="lblAlertasStockCount" style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-font-size: 11px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-padding: 2 9 2 9;" text="0" />
+                                 </children>
+                              </HBox>
+                              <Separator />
+
+                              <ListView fx:id="listAlertasStock" prefHeight="100.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" />
+
+                              <Button fx:id="btnVerInventario" mnemonicParsing="false" onAction="#abrirInventario" style="-fx-background-color: transparent; -fx-text-fill: #5b9bd5; -fx-font-weight: bold; -fx-cursor: hand;" text="Ver inventario completo" />
+                           </children>
+                        </VBox>
+
+                     </children>
+                  </HBox>
+
+                  <!-- ===================== FILA: ACTIVIDAD RECIENTE + ACCESOS RÁPIDOS ===================== -->
+                  <HBox spacing="16.0">
+                     <children>
+
+                        <!-- ACTIVIDAD RECIENTE -->
+                        <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #d0d0d0; -fx-border-radius: 4; -fx-background-radius: 4;" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets bottom="14.0" left="16.0" right="16.0" top="14.0" />
+                           </padding>
+                           <children>
+                              <Label style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #2b2b2b;" text="Actividad reciente" />
+                              <Separator />
+
+                              <ListView fx:id="listActividadReciente" prefHeight="200.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" />
+                              <Button fx:id="btnVerTodasNotificaciones1" mnemonicParsing="false" onAction="#abrirHistorial" style="-fx-background-color: transparent; -fx-text-fill: #5b9bd5; -fx-font-weight: bold; -fx-cursor: hand;" text="Ver historial completo" />
+                           </children>
+                        </VBox>
+
+                     </children>
+                  </HBox>
+
+               </VBox>
+            </content>
+         </ScrollPane>
+
+      </VBox>
+   </center>
+</BorderPane>
