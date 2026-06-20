@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid2.jjsh.RegistrarDevolucionController">
+   <children>
+      <Label layoutX="14.0" layoutY="20.0" text="REGISTRAR DEVOLUCIÓN">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="74.0" text="ID Préstamo:" />
+      <TextField fx:id="txtIdPrestamo" layoutX="149.0" layoutY="69.0" prefHeight="26.0" prefWidth="175.0" />
+      <Label layoutX="90.0" layoutY="115.0" text="Equipo:" />
+      <TextField fx:id="txtEquipo" layoutX="149.0" layoutY="110.0" prefHeight="26.0" prefWidth="175.0" />
+      <Label layoutX="41.0" layoutY="160.0" text="Fecha Devolución:" />
+      <DatePicker fx:id="dpFechaDevolucion" layoutX="149.0" layoutY="155.0" />
+      <Label layoutX="33.0" layoutY="205.0" text="Estado del Equipo:" />
+      <ChoiceBox fx:id="cmbEstadoEquipo" layoutX="149.0" layoutY="200.0" prefHeight="26.0" prefWidth="175.0" />
+      <Label layoutX="50.0" layoutY="255.0" text="Observaciones:" />
+      <TextArea fx:id="txtAObservaciones" layoutX="149.0" layoutY="250.0" prefHeight="80.0" prefWidth="460.0" />
+      <Button fx:id="btnCancelar" layoutX="510.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleBtnCancelar" text="Cancelar" />
+      <Button fx:id="btnGuardar" layoutX="410.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleBtnGuardar" text="Guardar" />
+   </children>
+</AnchorPane>
