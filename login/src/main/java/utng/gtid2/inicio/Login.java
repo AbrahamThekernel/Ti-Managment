@@ -22,6 +22,7 @@ public class Login {
     private void aceptar(){
         
         if (txtUsuario.getText().trim().isEmpty()) {
+            
         Alert alerta = new Alert(Alert.AlertType.ERROR);
         alerta.setTitle("Error");
         alerta.setHeaderText(null);
