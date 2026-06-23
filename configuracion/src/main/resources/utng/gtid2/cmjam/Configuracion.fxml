@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #2b2b2b;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid2.cmjam.ConfiguracionController">
+
+    <BorderPane fx:id="rootPane" style="-fx-background-color: #f3f3f3;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+
+        <!-- ===================== HEADER ===================== -->
+        <top>
+            <VBox spacing="14.0" BorderPane.alignment="CENTER">
+                <padding>
+                    <Insets bottom="0.0" left="24.0" right="24.0" top="20.0" />
+                </padding>
+
+                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                    <Label text="Configuración" textFill="#222222">
+                        <font>
+                            <javafx.scene.text.Font name="System Bold" size="22.0" />
+                        </font>
+                    </Label>
+                    <Region HBox.hgrow="ALWAYS" />
+                    <Button fx:id="btnGuardarCambios" mnemonicParsing="false" onAction="#regresar" style="-fx-background-color: #8fc1da; -fx-border-color: #5e9bbd; -fx-border-radius: 3; -fx-background-radius: 3; -fx-text-fill: #1c1c1c; -fx-font-weight: bold; -fx-cursor: hand;" text="Regresar" />
+               <Button fx:id="btnGuardarCambios1" mnemonicParsing="false" onAction="#abrirGuardar" style="-fx-background-color: #8fc1da; -fx-border-color: #5e9bbd; -fx-border-radius: 3; -fx-background-radius: 3; -fx-text-fill: #1c1c1c; -fx-font-weight: bold; -fx-cursor: hand;" text="Guardar cambios" />
+                </HBox>
+
+                <Separator prefWidth="200.0" />
+            </VBox>
+        </top>
+
+        <!-- ===================== FOOTER ===================== -->
+        <bottom>
+            <HBox alignment="CENTER_LEFT" spacing="10.0" style="-fx-background-color: #f3f3f3;" BorderPane.alignment="CENTER">
+                <padding>
+                    <Insets bottom="14.0" left="24.0" right="24.0" top="10.0" />
+                </padding>
+            </HBox>
+        </bottom>
+      <left>
+            <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-background: transparent;" BorderPane.alignment="CENTER">
+                <VBox prefHeight="422.0" prefWidth="611.0" spacing="16.0">
+                    <padding>
+                        <Insets bottom="20.0" left="24.0" right="24.0" top="16.0" />
+                    </padding>
+
+                    <!-- =============== CONFIGURACIÓN GENERAL =============== -->
+                    <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #d0d0d0; -fx-border-radius: 4; -fx-background-radius: 4;">
+                        <padding>
+                            <Insets bottom="16.0" left="18.0" right="18.0" top="14.0" />
+                        </padding>
+
+                        <HBox alignment="CENTER_LEFT" spacing="8.0">
+                            <Label text="Configuración general" textFill="#333333">
+                                <font>
+                                    <javafx.scene.text.Font name="System Bold" size="15.0" />
+                                </font>
+                            </Label>
+                            <Region HBox.hgrow="ALWAYS" />
+                            <Button fx:id="btnEditarGeneral" mnemonicParsing="false" onAction="#abrirEditar1" style="-fx-background-color: #e9e9e9; -fx-border-color: #c9c9c9; -fx-border-radius: 3; -fx-background-radius: 3; -fx-cursor: hand;" text="Editar" />
+                        </HBox>
+
+                        <Separator />
+
+                        <VBox fx:id="contenedorConfigGeneral" spacing="6.0">
+                            <Label text="Datos generales de la empresa, idioma, zona horaria y formato de fecha." textFill="#666666" wrapText="true" />
+                        </VBox>
+                    </VBox>
+
+                    <!-- =============== ROLES Y PERMISOS =============== -->
+                    <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #d0d0d0; -fx-border-radius: 4; -fx-background-radius: 4;">
+                        <padding>
+                            <Insets bottom="16.0" left="18.0" right="18.0" top="14.0" />
+                        </padding>
+
+                        <HBox alignment="CENTER_LEFT" spacing="8.0">
+                            <Label text="Roles y permisos" textFill="#333333">
+                                <font>
+                                    <javafx.scene.text.Font name="System Bold" size="15.0" />
+                                </font>
+                            </Label>
+                            <Region HBox.hgrow="ALWAYS" />
+                            <Button fx:id="btnGestionarRoles" mnemonicParsing="false" onAction="#abrirRoles" style="-fx-background-color: #e9e9e9; -fx-border-color: #c9c9c9; -fx-border-radius: 3; -fx-background-radius: 3; -fx-cursor: hand;" text="Gestionar roles" />
+                        </HBox>
+
+                        <Separator />
+
+                        <VBox fx:id="contenedorRolesPermisos" spacing="6.0">
+                            <Label text="Administra los roles del sistema y los permisos asignados a cada usuario." textFill="#666666" wrapText="true" />
+                        </VBox>
+                    </VBox>
+
+                    <!-- =============== SEGURIDAD =============== -->
+                    <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #d0d0d0; -fx-border-radius: 4; -fx-background-radius: 4;">
+                        <padding>
+                            <Insets bottom="16.0" left="18.0" right="18.0" top="14.0" />
+                        </padding>
+
+                        <HBox alignment="CENTER_LEFT" spacing="8.0">
+                            <Label text="Seguridad" textFill="#333333">
+                                <font>
+                                    <javafx.scene.text.Font name="System Bold" size="15.0" />
+                                </font>
+                            </Label>
+                            <Region HBox.hgrow="ALWAYS" />
+                            <Button fx:id="btnEditarSeguridad" mnemonicParsing="false" onAction="#abrirEditar" style="-fx-background-color: #e9e9e9; -fx-border-color: #c9c9c9; -fx-border-radius: 3; -fx-background-radius: 3; -fx-cursor: hand;" text="Editar" />
+                        </HBox>
+
+                        <Separator />
+
+                        <VBox fx:id="contenedorSeguridad" spacing="6.0">
+                            <Label text="Políticas de contraseñas y control de sesiones activas." textFill="#666666" wrapText="true" />
+                        </VBox>
+                    </VBox>
+
+                </VBox>
+            </ScrollPane>
+      </left>
+
+    </BorderPane>
+</AnchorPane>
