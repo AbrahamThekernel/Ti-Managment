@@ -17,4 +17,5 @@
       <Button fx:id="btnRegresar" layoutX="374.0" layoutY="235.0" mnemonicParsing="false" text="NO, REGRESAR" />
       <Label layoutX="144.0" layoutY="140.0" text="SEGURO QUE DESEA CREAR UN NUEVO RESPALDO?" />
    </children>
+   
 </AnchorPane>

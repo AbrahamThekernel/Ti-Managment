@@ -1,4 +1,4 @@
-package utng.gtid2.inicio.respaldo;
+package respaldos;
 
 public class RestaurarAnterior {
     

@@ -1,4 +1,4 @@
-package utng.gtid2.inicio.respaldo;
+package respaldos;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
