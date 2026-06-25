@@ -41,7 +41,7 @@ public class Login {
     }
 
         try {
-            App.setRoot("bienvenida");
+            App.setRoot("MenuPrincipal");
         } catch (Exception e){
             e.printStackTrace();
         }

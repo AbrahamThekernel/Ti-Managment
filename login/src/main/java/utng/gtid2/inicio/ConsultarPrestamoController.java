@@ -1,12 +1,11 @@
 package utng.gtid2.inicio;
 import java.io.IOException;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import utng.gtid2.jjsh.App;
-
 public class ConsultarPrestamoController {
 
     // Componentes de búsqueda y tabla

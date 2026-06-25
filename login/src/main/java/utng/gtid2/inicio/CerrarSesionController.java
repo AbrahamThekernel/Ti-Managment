@@ -15,6 +15,6 @@ public class CerrarSesionController {
 
     @FXML
     private void onConfirmarCerrarSesion(ActionEvent event) {
-        App.exit();
+        System.exit(0);
     }
 }
