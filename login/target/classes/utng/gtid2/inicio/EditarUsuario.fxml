@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="650.0" style="-fx-background-color: #f5f7fa;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid2.inicio.EditarUsuarioController">
+   <children>
+      <Label layoutX="30.0" layoutY="20.0" text="Editar Usuario" textFill="#2d3748">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="75.0" text="ID Usuario:" textFill="#4a5568" />
+      <TextField fx:id="txtIdUsua" layoutX="110.0" layoutY="70.0" prefHeight="28.0" prefWidth="240.0" promptText="Ingrese ID a editar..." style="-fx-background-radius: 4; -fx-border-color: #cbd5e0; -fx-border-radius: 4;" />
+      <Button fx:id="btnBuscar" layoutX="365.0" layoutY="70.0" mnemonicParsing="false" onAction="#handleBtnBuscar" prefHeight="28.0" prefWidth="80.0" style="-fx-background-color: #3182ce; -fx-text-fill: white; -fx-background-radius: 4; -fx-cursor: hand;" text="Buscar" />
+      <Button fx:id="btnCancelar" layoutX="455.0" layoutY="70.0" mnemonicParsing="false" onAction="#handleBtnCancelar" prefHeight="28.0" prefWidth="80.0" style="-fx-background-color: #e2e8f0; -fx-text-fill: #4a5568; -fx-background-radius: 4; -fx-cursor: hand;" text="Limpiar" />
+      
+      <Line endX="530.0" layoutX="90.0" layoutY="115.0" startX="-60.0" stroke="#e2e8f0" />
+      
+      <Label layoutX="35.0" layoutY="130.0" text="Modificar Información:" textFill="#2d3748">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      
+      <Label layoutX="40.0" layoutY="170.0" text="Nombre Completo:" textFill="#4a5568" />
+      <TextField fx:id="txtNombreC" layoutX="170.0" layoutY="165.0" prefWidth="230.0" style="-fx-background-radius: 4; -fx-border-color: #cbd5e0;" />
+      
+      <Label layoutX="40.0" layoutY="210.0" text="Nombre Usuario:" textFill="#4a5568" />
+      <TextField fx:id="txtNomUsua" layoutX="170.0" layoutY="205.0" prefWidth="230.0" style="-fx-background-radius: 4; -fx-border-color: #cbd5e0;" />
+      
+      <Label layoutX="40.0" layoutY="250.0" text="Rol:" textFill="#4a5568" />
+      <ChoiceBox fx:id="cmbRol" layoutX="170.0" layoutY="245.0" prefWidth="230.0" style="-fx-background-radius: 4;" />
+      
+      <Label layoutX="40.0" layoutY="290.0" text="Estado:" textFill="#4a5568" />
+      <ChoiceBox fx:id="cmbEstado" layoutX="170.0" layoutY="285.0" prefWidth="230.0" style="-fx-background-radius: 4;" />
+      
+      <Label layoutX="40.0" layoutY="330.0" text="Área:" textFill="#4a5568" />
+      <ChoiceBox fx:id="cmbArea" layoutX="170.0" layoutY="325.0" prefWidth="230.0" style="-fx-background-radius: 4;" />
+      
+      <Label layoutX="40.0" layoutY="370.0" text="Fecha Registro:" textFill="#4a5568" />
+      <DatePicker fx:id="dpFechaR" layoutX="170.0" layoutY="365.0" prefWidth="230.0" style="-fx-background-radius: 4;" />
+      
+      <Label layoutX="40.0" layoutY="410.0" text="Contraseña:" textFill="#4a5568" />
+      <PasswordField fx:id="pwdContraseña" layoutX="170.0" layoutY="405.0" prefWidth="230.0" style="-fx-background-radius: 4; -fx-border-color: #cbd5e0;" />
+      
+      <Button fx:id="btnActualizar" layoutX="460.0" layoutY="220.0" mnemonicParsing="false" onAction="#handleBtnActualizar" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #38a169; -fx-text-fill: white; -fx-background-radius: 6; -fx-cursor: hand;" text="Actualizar Datos">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnEliminar" layoutX="460.0" layoutY="275.0" mnemonicParsing="false" onAction="#handleBtnEliminar" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #e53e3e; -fx-text-fill: white; -fx-background-radius: 6; -fx-cursor: hand;" text="Eliminar Usuario">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnRegresar" layoutX="460.0" layoutY="330.0" mnemonicParsing="false" onAction="#handleBtnRegresar" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #718096; -fx-text-fill: white; -fx-background-radius: 6; -fx-cursor: hand;" text="Regresar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

@@ -1,8 +1,9 @@
-package utng.gtid232.inicio;
+package utng.gtid2.inicio;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import utng.gtid232.jjcm.App;
+
+
 
 /**
  * Controlador para CerrarSesion.fxml

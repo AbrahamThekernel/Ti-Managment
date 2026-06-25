@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="680" prefWidth="1100" style="-fx-background-color: #EBEBEB; -fx-font-family: 'Segoe UI';" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid2.inicio.MenuPrincipalController">
+
+    <!-- ══════════════════════════════════════════
+         BARRA SUPERIOR
+    ══════════════════════════════════════════════ -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="12" style="-fx-background-color: #FFFFFF; -fx-border-color: #E0E0E0; -fx-border-width: 0 0 1 0;">
+            <padding><Insets bottom="10" left="20" right="20" top="10" /></padding>
+            <VBox spacing="1">
+                <Label style="-fx-text-fill: #2D2D2D; -fx-font-size: 15px; -fx-font-weight: bold;" text="SOPORTE TÉCNICO" />
+                <Label style="-fx-text-fill: #555555; -fx-font-size: 11px;" text="Sistema de Gestión y Control de Materiales" />
+            </VBox>
+
+            <HBox HBox.hgrow="ALWAYS" />
+
+            <Label fx:id="lblUsuario" style="-fx-text-fill: #555555; -fx-font-size: 12px;" text="Usuario: Administrador" />
+            <Separator orientation="VERTICAL" style="-fx-background-color: #D9D9D9; -fx-padding: 0 1 0 1;" />
+        </HBox>
+    </top>
+
+    <!-- ══════════════════════════════════════════
+         SIDEBAR IZQUIERDO
+    ══════════════════════════════════════════════ -->
+    <left>
+        <VBox prefHeight="596.0" prefWidth="1032.0" spacing="0" style="-fx-background-color: #F4F4F4; -fx-border-color: #E0E0E0; -fx-border-width: 0 1 0 0;">
+            <padding><Insets bottom="8" top="8" /></padding>
+
+            <!-- Dashboard -->
+            <Button fx:id="btnEstadisticas" maxWidth="Infinity" onAction="#mostrarEstadisticas" style="-fx-background-color: #E2E2E2; -fx-text-fill: #1F1F1F; -fx-font-weight: bold;                            -fx-alignment: CENTER_LEFT; -fx-padding: 10 16 10 16;                            -fx-background-radius: 0; -fx-border-width: 0 0 0 3;                            -fx-border-color: #8C8C8C; -fx-cursor: hand;" text="  📊  Estadísticas" />
+
+            <Separator style="-fx-background-color: #DCDCDC; -fx-padding: 1 0 1 0;" />
+            <Label style="-fx-text-fill: #7F8C8D; -fx-font-size: 10px; -fx-font-weight: bold;                           -fx-padding: 8 16 2 16;" text="GESTIÓN" />
+
+            <Button fx:id="btnInventario" maxWidth="Infinity" onAction="#mostrarInventario" style="-fx-background-color: transparent; -fx-text-fill: #555555;                            -fx-alignment: CENTER_LEFT; -fx-padding: 10 16 10 16;                            -fx-background-radius: 0; -fx-border-width: 0; -fx-cursor: hand;" text="  📦  Inventario" />
+
+            <Button fx:id="btnPrestamos" maxWidth="Infinity" onAction="#mostrarPrestamos" style="-fx-background-color: transparent; -fx-text-fill: #555555;                            -fx-alignment: CENTER_LEFT; -fx-padding: 10 16 10 16;                            -fx-background-radius: 0; -fx-border-width: 0; -fx-cursor: hand;" text="  🔄  Préstamos" />
+
+            <Button fx:id="btnOrdenes" maxWidth="Infinity" onAction="#mostrarOrdenes" prefHeight="36.0" prefWidth="878.0" style="-fx-background-color: transparent; -fx-text-fill: #555555;                            -fx-alignment: CENTER_LEFT; -fx-padding: 10 16 10 16;                            -fx-background-radius: 0; -fx-border-width: 0; -fx-cursor: hand;" text="  📋  Órdenes de Servicio" />
+
+            <Button fx:id="btnMantenimientos" maxWidth="Infinity" onAction="#mostrarMantenimientos" style="-fx-background-color: transparent; -fx-text-fill: #555555;                            -fx-alignment: CENTER_LEFT; -fx-padding: 10 16 10 16;                            -fx-background-radius: 0; -fx-border-width: 0; -fx-cursor: hand;" text="  🔧  Mantenimientos" />
+
+            <Button fx:id="btnEquipos" maxWidth="Infinity" onAction="#mostrarEquipos" style="-fx-background-color: transparent; -fx-text-fill: #555555;                            -fx-alignment: CENTER_LEFT; -fx-padding: 10 16 10 16;                            -fx-background-radius: 0; -fx-border-width: 0; -fx-cursor: hand;" text="  🖥  Equipos" />
+
+            <Separator style="-fx-background-color: #DCDCDC; -fx-padding: 1 0 1 0;" />
+            <Label style="-fx-text-fill: #7F8C8D; -fx-font-size: 10px; -fx-font-weight: bold;                           -fx-padding: 8 16 2 16;" text="SISTEMA" />
+
+            <Button fx:id="btnUsuarios" maxWidth="Infinity" onAction="#mostrarUsuarios" style="-fx-background-color: transparent; -fx-text-fill: #555555;                            -fx-alignment: CENTER_LEFT; -fx-padding: 10 16 10 16;                            -fx-background-radius: 0; -fx-border-width: 0; -fx-cursor: hand;" text="  👤  Usuarios" />
+
+            <Button fx:id="btnReportes" maxWidth="Infinity" onAction="#mostrarReportes" style="-fx-background-color: transparent; -fx-text-fill: #555555;                            -fx-alignment: CENTER_LEFT; -fx-padding: 10 16 10 16;                            -fx-background-radius: 0; -fx-border-width: 0; -fx-cursor: hand;" text="  📄  Reportes" />
+
+            <Button fx:id="btnRespaldos" maxWidth="Infinity" onAction="#mostrarRespaldos" style="-fx-background-color: transparent; -fx-text-fill: #555555;                            -fx-alignment: CENTER_LEFT; -fx-padding: 10 16 10 16;                            -fx-background-radius: 0; -fx-border-width: 0; -fx-cursor: hand;" text="  💾  Respaldos" />
+
+            <Button fx:id="btnConfiguracion" maxWidth="Infinity" onAction="#mostrarConfiguracion" style="-fx-background-color: transparent; -fx-text-fill: #555555;                            -fx-alignment: CENTER_LEFT; -fx-padding: 10 16 10 16;                            -fx-background-radius: 0; -fx-border-width: 0; -fx-cursor: hand;" text="  ⚙  Configuración" />
+
+            <!-- Espaciador -->
+            <Region VBox.vgrow="ALWAYS" />
+
+            <Separator style="-fx-background-color: #DCDCDC; -fx-padding: 1 0 1 0;" />
+
+            <Button fx:id="btnPerfil" maxWidth="Infinity" onAction="#mostrarPerfil" style="-fx-background-color: transparent; -fx-text-fill: #555555;                            -fx-alignment: CENTER_LEFT; -fx-padding: 10 16 10 16;                            -fx-background-radius: 0; -fx-border-width: 0; -fx-cursor: hand;" text="  👤  Mi Perfil" />
+
+            <Button fx:id="btnCerrarSesion" maxWidth="Infinity" onAction="#cerrarSesion" style="-fx-background-color: transparent; -fx-text-fill: #E74C3C;                            -fx-alignment: CENTER_LEFT; -fx-padding: 10 16 10 16;                            -fx-background-radius: 0; -fx-border-width: 0; -fx-cursor: hand;" text="  🚪  Cerrar Sesión" />
+        </VBox>
+    </left>
+
+    <!-- ══════════════════════════════════════════
+         CONTENIDO CENTRAL
+    ══════════════════════════════════════════════ -->
+    <center>
+        <StackPane fx:id="contenedorPrincipal" style="-fx-background-color: #EBEBEB;">
+
+            <!-- ── ESTADÍSTICAS ── -->
+            <VBox fx:id="panelEstadisticas" managed="true" spacing="14" visible="true">
+                <padding><Insets bottom="20" left="24" right="24" top="20" /></padding>
+
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <VBox spacing="1" />
+                </HBox>
+                <Separator />
+
+                <!-- Tarjetas -->
+                <HBox spacing="14" />
+                <HBox spacing="10" />
+            </VBox>
+
+            <!-- ── INVENTARIO ── -->
+            <VBox fx:id="panelInventario" managed="false" spacing="14" visible="false">
+                <padding><Insets bottom="20" left="24" right="24" top="20" /></padding>
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label style="-fx-font-size: 22px;" text="📦" />
+                    <VBox spacing="1">
+                        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2D2D2D;" text="Inventario" />
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #7F8C8D;" text="Gestión de materiales y stock" />
+                    </VBox>
+                </HBox>
+                <Separator />
+                <HBox spacing="10">
+                    <TextField promptText="Buscar material..." style="-fx-background-color: white; -fx-border-color: #BEBEBE;                                       -fx-border-width: 1; -fx-background-radius: 4;                                       -fx-border-radius: 4; -fx-padding: 5 10 5 10;" HBox.hgrow="ALWAYS" />
+                    <Button style="-fx-background-color: #E0E0E0; -fx-text-fill: #2D2D2D;                                    -fx-font-weight: bold; -fx-background-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Buscar" />
+                    <Button style="-fx-background-color: #E0E0E0; -fx-text-fill: #2D2D2D;                                    -fx-font-weight: bold; -fx-background-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="+ Agregar Material" />
+                </HBox>
+                <HBox spacing="10">
+                    <Button style="-fx-background-color: #E8E8E8; -fx-text-fill: #3A3A3A;                                    -fx-border-color: #CCCCCC; -fx-border-width: 1;                                    -fx-background-radius: 20; -fx-border-radius: 20;                                    -fx-padding: 4 12 4 12; -fx-cursor: hand;" text="Cables" />
+                    <Button style="-fx-background-color: #E8E8E8; -fx-text-fill: #3A3A3A;                                    -fx-border-color: #CCCCCC; -fx-border-width: 1;                                    -fx-background-radius: 20; -fx-border-radius: 20;                                    -fx-padding: 4 12 4 12; -fx-cursor: hand;" text="Equipos de cómputo" />
+                    <Button style="-fx-background-color: #E8E8E8; -fx-text-fill: #3A3A3A;                                    -fx-border-color: #CCCCCC; -fx-border-width: 1;                                    -fx-background-radius: 20; -fx-border-radius: 20;                                    -fx-padding: 4 12 4 12; -fx-cursor: hand;" text="Periféricos" />
+                    <Button style="-fx-background-color: #E8E8E8; -fx-text-fill: #3A3A3A;                                    -fx-border-color: #CCCCCC; -fx-border-width: 1;                                    -fx-background-radius: 20; -fx-border-radius: 20;                                    -fx-padding: 4 12 4 12; -fx-cursor: hand;" text="Consumibles" />
+                    <Region HBox.hgrow="ALWAYS" />
+                    <Button style="-fx-background-color: #ECECEC; -fx-text-fill: #2D2D2D;                                    -fx-border-color: #D0D0D0; -fx-border-width: 1;                                    -fx-background-radius: 4; -fx-border-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Entradas" />
+                    <Button style="-fx-background-color: #ECECEC; -fx-text-fill: #2D2D2D;                                    -fx-border-color: #D0D0D0; -fx-border-width: 1;                                    -fx-background-radius: 4; -fx-border-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Salidas" />
+                    <Button style="-fx-background-color: #E0E0E0; -fx-text-fill: #2D2D2D;                                    -fx-font-weight: bold; -fx-background-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Alertas de Stock" />
+                </HBox>
+                <TableView style="-fx-background-color: white; -fx-border-color: #BEBEBE; -fx-border-width: 1;" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn prefWidth="60" text="ID" />
+                        <TableColumn prefWidth="100" text="Código" />
+                        <TableColumn prefWidth="200" text="Nombre" />
+                        <TableColumn prefWidth="140" text="Categoría" />
+                        <TableColumn prefWidth="80" text="Stock" />
+                        <TableColumn prefWidth="80" text="Mínimo" />
+                        <TableColumn prefWidth="130" text="Ubicación" />
+                        <TableColumn prefWidth="100" text="Estado" />
+                    </columns>
+                    <placeholder><Label text="No content in table" /></placeholder>
+                </TableView>
+                <HBox alignment="CENTER_RIGHT" spacing="10">
+                    <Button style="-fx-background-color: #ECECEC; -fx-text-fill: #2D2D2D;                                    -fx-border-color: #D0D0D0; -fx-border-width: 1;                                    -fx-background-radius: 4; -fx-border-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Editar material" />
+                    <Button style="-fx-background-color: #C0392B; -fx-text-fill: white;                                    -fx-font-weight: bold; -fx-background-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Eliminar material" />
+                </HBox>
+            </VBox>
+
+            <!-- ── USUARIOS ── -->
+            <VBox fx:id="panelUsuarios" managed="false" spacing="14" visible="false">
+                <padding><Insets bottom="20" left="24" right="24" top="20" /></padding>
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label style="-fx-font-size: 22px;" text="👤" />
+                    <VBox spacing="1">
+                        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2D2D2D;" text="Usuarios" />
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #7F8C8D;" text="Gestión de cuentas y roles (Súper usuario)" />
+                    </VBox>
+                </HBox>
+                <Separator />
+                <HBox spacing="10">
+                    <TextField promptText="Buscar usuario..." style="-fx-background-color: white; -fx-border-color: #BEBEBE;                                       -fx-border-width: 1; -fx-background-radius: 4;                                       -fx-border-radius: 4; -fx-padding: 5 10 5 10;" HBox.hgrow="ALWAYS" />
+                    <Button style="-fx-background-color: #E0E0E0; -fx-text-fill: #2D2D2D;                                    -fx-font-weight: bold; -fx-background-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Buscar" />
+                    <Button style="-fx-background-color: #E0E0E0; -fx-text-fill: #2D2D2D;                                    -fx-font-weight: bold; -fx-background-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="+ Registrar Usuario" />
+                </HBox>
+                <TableView style="-fx-background-color: white; -fx-border-color: #BEBEBE; -fx-border-width: 1;" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn prefWidth="60" text="ID" />
+                        <TableColumn prefWidth="140" text="Usuario" />
+                        <TableColumn prefWidth="180" text="Nombre" />
+                        <TableColumn prefWidth="120" text="Rol" />
+                        <TableColumn prefWidth="90" text="Estado" />
+                        <TableColumn prefWidth="150" text="Último acceso" />
+                    </columns>
+                    <placeholder><Label text="No content in table" /></placeholder>
+                </TableView>
+                <HBox alignment="CENTER_RIGHT" spacing="10">
+                    <Button style="-fx-background-color: #ECECEC; -fx-text-fill: #2D2D2D;                                    -fx-border-color: #D0D0D0; -fx-border-width: 1;                                    -fx-background-radius: 4; -fx-border-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Modificar usuario" />
+                    <Button style="-fx-background-color: #ECECEC; -fx-text-fill: #2D2D2D;                                    -fx-border-color: #D0D0D0; -fx-border-width: 1;                                    -fx-background-radius: 4; -fx-border-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Asignar roles" />
+                    <Button style="-fx-background-color: #ECECEC; -fx-text-fill: #2D2D2D;                                    -fx-border-color: #D0D0D0; -fx-border-width: 1;                                    -fx-background-radius: 4; -fx-border-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Historial de actividad" />
+                    <Button style="-fx-background-color: #C0392B; -fx-text-fill: white;                                    -fx-font-weight: bold; -fx-background-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Eliminar usuario" />
+                </HBox>
+            </VBox>
+
+            <!-- ── PRÉSTAMOS ── -->
+            <VBox fx:id="panelPrestamos" managed="false" spacing="14" visible="false">
+                <padding><Insets bottom="20" left="24" right="24" top="20" /></padding>
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label style="-fx-font-size: 22px;" text="🔄" />
+                    <VBox spacing="1">
+                        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2D2D2D;" text="Préstamos" />
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #7F8C8D;" text="Control de préstamos y devoluciones" />
+                    </VBox>
+                </HBox>
+                <Separator />
+                <HBox spacing="10">
+                    <TextField promptText="Buscar préstamo..." style="-fx-background-color: white; -fx-border-color: #BEBEBE;                                       -fx-border-width: 1; -fx-background-radius: 4;                                       -fx-border-radius: 4; -fx-padding: 5 10 5 10;" HBox.hgrow="ALWAYS" />
+                    <Button style="-fx-background-color: #E0E0E0; -fx-text-fill: #2D2D2D;                                    -fx-font-weight: bold; -fx-background-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Buscar" />
+                    <Button style="-fx-background-color: #E0E0E0; -fx-text-fill: #2D2D2D;                                    -fx-font-weight: bold; -fx-background-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="+ Registrar Préstamo" />
+                    <Button style="-fx-background-color: #ECECEC; -fx-text-fill: #2D2D2D;                                    -fx-border-color: #D0D0D0; -fx-border-width: 1;                                    -fx-background-radius: 4; -fx-border-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Registrar Devolución" />
+                </HBox>
+                <TableView style="-fx-background-color: white; -fx-border-color: #BEBEBE; -fx-border-width: 1;" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn prefWidth="60" text="ID" />
+                        <TableColumn prefWidth="180" text="Equipo / Material" />
+                        <TableColumn prefWidth="150" text="Responsable" />
+                        <TableColumn prefWidth="140" text="Fecha préstamo" />
+                        <TableColumn prefWidth="150" text="Fecha devolución" />
+                        <TableColumn prefWidth="100" text="Estado" />
+                    </columns>
+                    <placeholder><Label text="No content in table" /></placeholder>
+                </TableView>
+                <HBox alignment="CENTER_RIGHT" spacing="10">
+                    <Button style="-fx-background-color: #ECECEC; -fx-text-fill: #2D2D2D;                                    -fx-border-color: #D0D0D0; -fx-border-width: 1;                                    -fx-background-radius: 4; -fx-border-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Equipos prestados" />
+                    <Button style="-fx-background-color: #ECECEC; -fx-text-fill: #2D2D2D;                                    -fx-border-color: #D0D0D0; -fx-border-width: 1;                                    -fx-background-radius: 4; -fx-border-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Historial" />
+                    <Button style="-fx-background-color: #E0E0E0; -fx-text-fill: #2D2D2D;                                    -fx-font-weight: bold; -fx-background-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Generar comprobante" />
+                </HBox>
+            </VBox>
+
+            <!-- ── ÓRDENES DE SERVICIO ── -->
+            <VBox fx:id="panelOrdenes" managed="false" spacing="14" visible="false">
+                <padding><Insets bottom="20" left="24" right="24" top="20" /></padding>
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label style="-fx-font-size: 22px;" text="📋" />
+                    <VBox spacing="1">
+                        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2D2D2D;" text="Órdenes de Servicio" />
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #7F8C8D;" text="Seguimiento de órdenes y técnicos asignados" />
+                    </VBox>
+                </HBox>
+                <Separator />
+                <HBox spacing="10">
+                    <TextField promptText="Buscar orden..." style="-fx-background-color: white; -fx-border-color: #BEBEBE;                                       -fx-border-width: 1; -fx-background-radius: 4;                                       -fx-border-radius: 4; -fx-padding: 5 10 5 10;" HBox.hgrow="ALWAYS" />
+                    <Button style="-fx-background-color: #E0E0E0; -fx-text-fill: #2D2D2D;                                    -fx-font-weight: bold; -fx-background-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Buscar" />
+                    <Button style="-fx-background-color: #E0E0E0; -fx-text-fill: #2D2D2D;                                    -fx-font-weight: bold; -fx-background-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="+ Crear Orden" />
+                </HBox>
+                <TableView style="-fx-background-color: white; -fx-border-color: #BEBEBE; -fx-border-width: 1;" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn prefWidth="60" text="ID" />
+                        <TableColumn prefWidth="220" text="Descripción" />
+                        <TableColumn prefWidth="140" text="Técnico" />
+                        <TableColumn prefWidth="120" text="Fecha" />
+                        <TableColumn prefWidth="100" text="Prioridad" />
+                        <TableColumn prefWidth="110" text="Estado" />
+                    </columns>
+                    <placeholder><Label text="No content in table" /></placeholder>
+                </TableView>
+                <HBox alignment="CENTER_RIGHT" spacing="10">
+                    <Button style="-fx-background-color: #ECECEC; -fx-text-fill: #2D2D2D;                                    -fx-border-color: #D0D0D0; -fx-border-width: 1;                                    -fx-background-radius: 4; -fx-border-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Asignar técnico" />
+                    <Button style="-fx-background-color: #ECECEC; -fx-text-fill: #2D2D2D;                                    -fx-border-color: #D0D0D0; -fx-border-width: 1;                                    -fx-background-radius: 4; -fx-border-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Actualizar estado" />
+                    <Button style="-fx-background-color: #ECECEC; -fx-text-fill: #2D2D2D;                                    -fx-border-color: #D0D0D0; -fx-border-width: 1;                                    -fx-background-radius: 4; -fx-border-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Historial de órdenes" />
+                    <Button style="-fx-background-color: #C0392B; -fx-text-fill: white;                                    -fx-font-weight: bold; -fx-background-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Cerrar orden" />
+                </HBox>
+            </VBox>
+
+            <!-- ── MANTENIMIENTOS ── -->
+            <VBox fx:id="panelMantenimientos" managed="false" spacing="14" visible="false">
+                <padding><Insets bottom="20" left="24" right="24" top="20" /></padding>
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label style="-fx-font-size: 22px;" text="🔧" />
+                    <VBox spacing="1">
+                        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2D2D2D;" text="Mantenimientos" />
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #7F8C8D;" text="Preventivo, correctivo y programación" />
+                    </VBox>
+                </HBox>
+                <Separator />
+                <HBox spacing="10">
+                    <Button style="-fx-background-color: #E8E8E8; -fx-text-fill: #3A3A3A;                                    -fx-border-color: #CCCCCC; -fx-border-width: 1;                                    -fx-background-radius: 20; -fx-border-radius: 20;                                    -fx-padding: 4 12 4 12; -fx-cursor: hand;" text="Mantenimiento Preventivo" />
+                    <Button style="-fx-background-color: #E8E8E8; -fx-text-fill: #3A3A3A;                                    -fx-border-color: #CCCCCC; -fx-border-width: 1;                                    -fx-background-radius: 20; -fx-border-radius: 20;                                    -fx-padding: 4 12 4 12; -fx-cursor: hand;" text="Mantenimiento Correctivo" />
+                    <Region HBox.hgrow="ALWAYS" />
+                    <Button style="-fx-background-color: #E0E0E0; -fx-text-fill: #2D2D2D;                                    -fx-font-weight: bold; -fx-background-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="+ Programar Mantenimiento" />
+                </HBox>
+                <TableView style="-fx-background-color: white; -fx-border-color: #BEBEBE; -fx-border-width: 1;" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn prefWidth="60" text="ID" />
+                        <TableColumn prefWidth="180" text="Equipo" />
+                        <TableColumn prefWidth="120" text="Tipo" />
+                        <TableColumn prefWidth="140" text="Técnico" />
+                        <TableColumn prefWidth="150" text="Fecha programada" />
+                        <TableColumn prefWidth="100" text="Estado" />
+                    </columns>
+                    <placeholder><Label text="No content in table" /></placeholder>
+                </TableView>
+                <HBox alignment="CENTER_RIGHT" spacing="10">
+                    <Button style="-fx-background-color: #ECECEC; -fx-text-fill: #2D2D2D;                                    -fx-border-color: #D0D0D0; -fx-border-width: 1;                                    -fx-background-radius: 4; -fx-border-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Equipos atendidos" />
+                    <Button style="-fx-background-color: #ECECEC; -fx-text-fill: #2D2D2D;                                    -fx-border-color: #D0D0D0; -fx-border-width: 1;                                    -fx-background-radius: 4; -fx-border-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Historial" />
+                </HBox>
+            </VBox>
+
+            <!-- ── EQUIPOS ── -->
+            <VBox fx:id="panelEquipos" managed="false" spacing="14" visible="false">
+                <padding><Insets bottom="20" left="24" right="24" top="20" /></padding>
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label style="-fx-font-size: 22px;" text="🖥" />
+                    <VBox spacing="1">
+                        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2D2D2D;" text="Equipos" />
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #7F8C8D;" text="Registro y control de equipos" />
+                    </VBox>
+                </HBox>
+                <Separator />
+                <HBox spacing="10">
+                    <TextField promptText="Buscar equipo..." style="-fx-background-color: white; -fx-border-color: #BEBEBE;                                       -fx-border-width: 1; -fx-background-radius: 4;                                       -fx-border-radius: 4; -fx-padding: 5 10 5 10;" HBox.hgrow="ALWAYS" />
+                    <Button style="-fx-background-color: #E0E0E0; -fx-text-fill: #2D2D2D;                                    -fx-font-weight: bold; -fx-background-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Buscar" />
+                    <Button style="-fx-background-color: #E0E0E0; -fx-text-fill: #2D2D2D;                                    -fx-font-weight: bold; -fx-background-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Registrar equipo" />
+                </HBox>
+                <TableView style="-fx-background-color: white; -fx-border-color: #BEBEBE; -fx-border-width: 1;" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn prefWidth="60" text="ID" />
+                        <TableColumn prefWidth="100" text="Código" />
+                        <TableColumn prefWidth="180" text="Nombre" />
+                        <TableColumn prefWidth="150" text="Responsable" />
+                        <TableColumn prefWidth="200" text="Descripción" />
+                        <TableColumn prefWidth="140" text="Fecha registro" />
+                    </columns>
+                    <placeholder><Label text="No content in table" /></placeholder>
+                </TableView>
+                <HBox alignment="CENTER_RIGHT" spacing="10">
+                    <Button style="-fx-background-color: #ECECEC; -fx-text-fill: #2D2D2D;                                    -fx-border-color: #D0D0D0; -fx-border-width: 1;                                    -fx-background-radius: 4; -fx-border-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Editar equipo" />
+                    <Button style="-fx-background-color: #ECECEC; -fx-text-fill: #2D2D2D;                                    -fx-border-color: #D0D0D0; -fx-border-width: 1;                                    -fx-background-radius: 4; -fx-border-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Asignar responsable" />
+                    <Button style="-fx-background-color: #ECECEC; -fx-text-fill: #2D2D2D;                                    -fx-border-color: #D0D0D0; -fx-border-width: 1;                                    -fx-background-radius: 4; -fx-border-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Historial del equipo" />
+                    <Button style="-fx-background-color: #C0392B; -fx-text-fill: white;                                    -fx-font-weight: bold; -fx-background-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Dar de baja" />
+                </HBox>
+            </VBox>
+
+            <!-- ── REPORTES ── -->
+            <VBox fx:id="panelReportes" managed="false" spacing="14" visible="false">
+                <padding><Insets bottom="20" left="24" right="24" top="20" /></padding>
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label style="-fx-font-size: 22px;" text="📄" />
+                    <VBox spacing="1">
+                        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2D2D2D;" text="Reportes" />
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #7F8C8D;" text="Generación y exportación de informes" />
+                    </VBox>
+                </HBox>
+                <Separator />
+                <GridPane hgap="14" vgap="14" VBox.vgrow="ALWAYS">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="ALWAYS" percentWidth="33" />
+                        <ColumnConstraints hgrow="ALWAYS" percentWidth="33" />
+                        <ColumnConstraints hgrow="ALWAYS" percentWidth="33" />
+                    </columnConstraints>
+                    <!-- Fila 0 -->
+                    <VBox spacing="8" style="-fx-background-color: white; -fx-background-radius: 6;                                  -fx-border-color: #D5D8DC; -fx-border-width: 1; -fx-border-radius: 6;                                  -fx-padding: 16;" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                        <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #2D2D2D;" text="📅  Reporte Semanal" />
+                        <Label style="-fx-font-size: 11px; -fx-text-fill: #7F8C8D;" text="Resumen de la semana actual" />
+                        <Button maxWidth="Infinity" style="-fx-background-color: #E0E0E0; -fx-text-fill: #2D2D2D;                                        -fx-font-weight: bold; -fx-background-radius: 4;                                        -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Generar" />
+                    </VBox>
+                    <VBox spacing="8" style="-fx-background-color: white; -fx-background-radius: 6;                                  -fx-border-color: #D5D8DC; -fx-border-width: 1; -fx-border-radius: 6;                                  -fx-padding: 16;" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                        <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #2D2D2D;" text="📅  Reporte Mensual" />
+                        <Label style="-fx-font-size: 11px; -fx-text-fill: #7F8C8D;" text="Resumen del mes en curso" />
+                        <Button maxWidth="Infinity" style="-fx-background-color: #E0E0E0; -fx-text-fill: #2D2D2D;                                        -fx-font-weight: bold; -fx-background-radius: 4;                                        -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Generar" />
+                    </VBox>
+                    <VBox spacing="8" style="-fx-background-color: white; -fx-background-radius: 6;                                  -fx-border-color: #D5D8DC; -fx-border-width: 1; -fx-border-radius: 6;                                  -fx-padding: 16;" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                        <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #2D2D2D;" text="📦  Reporte de Inventario" />
+                        <Label style="-fx-font-size: 11px; -fx-text-fill: #7F8C8D;" text="Estado actual del inventario" />
+                        <Button maxWidth="Infinity" style="-fx-background-color: #E0E0E0; -fx-text-fill: #2D2D2D;                                        -fx-font-weight: bold; -fx-background-radius: 4;                                        -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Generar" />
+                    </VBox>
+                    <!-- Fila 1 -->
+                    <VBox spacing="8" style="-fx-background-color: white; -fx-background-radius: 6;                                  -fx-border-color: #D5D8DC; -fx-border-width: 1; -fx-border-radius: 6;                                  -fx-padding: 16;" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                        <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #2D2D2D;" text="🔄  Reporte de Préstamos" />
+                        <Label style="-fx-font-size: 11px; -fx-text-fill: #7F8C8D;" text="Historial y estado de préstamos" />
+                        <Button maxWidth="Infinity" style="-fx-background-color: #E0E0E0; -fx-text-fill: #2D2D2D;                                        -fx-font-weight: bold; -fx-background-radius: 4;                                        -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Generar" />
+                    </VBox>
+                    <VBox spacing="8" style="-fx-background-color: white; -fx-background-radius: 6;                                  -fx-border-color: #D5D8DC; -fx-border-width: 1; -fx-border-radius: 6;                                  -fx-padding: 16;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #2D2D2D;" text="🔧  Reporte de Mantenimientos" />
+                        <Label style="-fx-font-size: 11px; -fx-text-fill: #7F8C8D;" text="Preventivos y correctivos" />
+                        <Button maxWidth="Infinity" style="-fx-background-color: #E0E0E0; -fx-text-fill: #2D2D2D;                                        -fx-font-weight: bold; -fx-background-radius: 4;                                        -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Generar" />
+                    </VBox>
+                    <VBox spacing="8" style="-fx-background-color: white; -fx-background-radius: 6;                                  -fx-border-color: #D5D8DC; -fx-border-width: 1; -fx-border-radius: 6;                                  -fx-padding: 16;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                        <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #2D2D2D;" text="📤  Exportar" />
+                        <Label style="-fx-font-size: 11px; -fx-text-fill: #7F8C8D;" text="Descarga en diferentes formatos" />
+                        <HBox spacing="8">
+                            <Button maxWidth="Infinity" style="-fx-background-color: #E0E0E0; -fx-text-fill: #2D2D2D;                                            -fx-font-weight: bold; -fx-background-radius: 4;                                            -fx-padding: 6 10 6 10; -fx-cursor: hand;" text="PDF" HBox.hgrow="ALWAYS" />
+                            <Button maxWidth="Infinity" style="-fx-background-color: #E0E0E0; -fx-text-fill: #2D2D2D;                                            -fx-font-weight: bold; -fx-background-radius: 4;                                            -fx-padding: 6 10 6 10; -fx-cursor: hand;" text="Excel" HBox.hgrow="ALWAYS" />
+                        </HBox>
+                    </VBox>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+                </GridPane>
+            </VBox>
+
+            <!-- ── RESPALDOS ── -->
+            <VBox fx:id="panelRespaldos" managed="false" spacing="14" visible="false">
+                <padding><Insets bottom="20" left="24" right="24" top="20" /></padding>
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label style="-fx-font-size: 22px;" text="💾" />
+                    <VBox spacing="1">
+                        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2D2D2D;" text="Respaldos" />
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #7F8C8D;" text="Copias de seguridad y restauración del sistema" />
+                    </VBox>
+                </HBox>
+                <Separator />
+                <HBox spacing="10">
+                    <Button style="-fx-background-color: #E0E0E0; -fx-text-fill: #2D2D2D;                                    -fx-font-weight: bold; -fx-background-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="+ Crear Respaldo" />
+                    <Button style="-fx-background-color: #ECECEC; -fx-text-fill: #2D2D2D;                                    -fx-border-color: #D0D0D0; -fx-border-width: 1;                                    -fx-background-radius: 4; -fx-border-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="↩ Restaurar Respaldo" />
+                    <Button style="-fx-background-color: #ECECEC; -fx-text-fill: #2D2D2D;                                    -fx-border-color: #D0D0D0; -fx-border-width: 1;                                    -fx-background-radius: 4; -fx-border-radius: 4;                                    -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="⏰ Programar Respaldo" />
+                </HBox>
+                <TableView style="-fx-background-color: white; -fx-border-color: #BEBEBE; -fx-border-width: 1;" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn prefWidth="60" text="ID" />
+                        <TableColumn prefWidth="200" text="Nombre" />
+                        <TableColumn prefWidth="160" text="Fecha" />
+                        <TableColumn prefWidth="100" text="Tamaño" />
+                        <TableColumn prefWidth="120" text="Tipo" />
+                        <TableColumn prefWidth="100" text="Estado" />
+                    </columns>
+                    <placeholder><Label text="No content in table" /></placeholder>
+                </TableView>
+            </VBox>
+
+            <!-- ── CONFIGURACIÓN ── -->
+            <VBox fx:id="panelConfiguracion" managed="false" spacing="14" visible="false">
+                <padding><Insets bottom="20" left="24" right="24" top="20" /></padding>
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label style="-fx-font-size: 22px;" text="⚙" />
+                    <VBox spacing="1">
+                        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2D2D2D;" text="Configuración" />
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #7F8C8D;" text="Parámetros generales del sistema" />
+                    </VBox>
+                </HBox>
+                <Separator />
+                <HBox spacing="16" VBox.vgrow="ALWAYS">
+                    <VBox prefWidth="200" spacing="4">
+                        <Button maxWidth="Infinity" style="-fx-background-color: #E2E2E2; -fx-text-fill: #1F1F1F;                                        -fx-font-weight: bold; -fx-alignment: CENTER_LEFT;                                        -fx-padding: 8 12 8 12; -fx-background-radius: 4;                                        -fx-border-color: #8C8C8C; -fx-border-width: 0 0 0 3;                                        -fx-cursor: hand;" text="Configuración general" />
+                        <Button maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: #2D2D2D;                                        -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;                                        -fx-background-radius: 4; -fx-cursor: hand;" text="Roles y permisos" />
+                        <Button maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: #2D2D2D;                                        -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;                                        -fx-background-radius: 4; -fx-cursor: hand;" text="Niveles mín. de stock" />
+                        <Button maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: #2D2D2D;                                        -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;                                        -fx-background-radius: 4; -fx-cursor: hand;" text="Correo de notificaciones" />
+                        <Button maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: #2D2D2D;                                        -fx-alignment: CENTER_LEFT; -fx-padding: 8 12 8 12;                                        -fx-background-radius: 4; -fx-cursor: hand;" text="Seguridad" />
+                    </VBox>
+                    <Separator orientation="VERTICAL" />
+                    <VBox spacing="12" HBox.hgrow="ALWAYS">
+                        <Label style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #7F8C8D;" text="Configuración general" />
+                        <GridPane hgap="16" vgap="10">
+                            <columnConstraints>
+                                <ColumnConstraints prefWidth="200" />
+                                <ColumnConstraints hgrow="ALWAYS" />
+                            </columnConstraints>
+                            <Label text="Nombre del sistema:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                            <TextField promptText="SGCM - Soporte Técnico" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                            <Label text="Institución:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                            <TextField promptText="Nombre de la institución" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            <Label text="Zona horaria:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                            <ComboBox maxWidth="Infinity" promptText="America/Mexico_City" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                            <Label text="Idioma:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                            <ComboBox maxWidth="Infinity" promptText="Español" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                     </rowConstraints>
+                        </GridPane>
+                        <HBox spacing="10">
+                            <Button style="-fx-background-color: #E0E0E0; -fx-text-fill: #2D2D2D;                                            -fx-font-weight: bold; -fx-background-radius: 4;                                            -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Guardar cambios" />
+                            <Button style="-fx-background-color: #ECECEC; -fx-text-fill: #2D2D2D;                                            -fx-border-color: #D0D0D0; -fx-border-width: 1;                                            -fx-background-radius: 4; -fx-border-radius: 4;                                            -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Cancelar" />
+                        </HBox>
+                    </VBox>
+                </HBox>
+            </VBox>
+
+            <!-- ── PERFIL ── -->
+            <VBox fx:id="panelPerfil" managed="false" spacing="14" visible="false">
+                <padding><Insets bottom="20" left="24" right="24" top="20" /></padding>
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label style="-fx-font-size: 22px;" text="👤" />
+                    <VBox spacing="1">
+                        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2D2D2D;" text="Mi Perfil" />
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #7F8C8D;" text="Información y configuración de tu cuenta" />
+                    </VBox>
+                </HBox>
+                <Separator />
+                <HBox spacing="24">
+                    <VBox alignment="CENTER" prefWidth="160" spacing="10">
+                        <Label style="-fx-font-size: 64px;" text="👤" />
+                        <Button maxWidth="Infinity" style="-fx-background-color: #ECECEC; -fx-text-fill: #2D2D2D;                                        -fx-border-color: #D0D0D0; -fx-border-width: 1;                                        -fx-background-radius: 4; -fx-border-radius: 4;                                        -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Cambiar foto" />
+                    </VBox>
+                    <Separator orientation="VERTICAL" />
+                    <VBox spacing="12" HBox.hgrow="ALWAYS">
+                        <GridPane hgap="16" vgap="10">
+                            <columnConstraints>
+                                <ColumnConstraints prefWidth="160" />
+                                <ColumnConstraints hgrow="ALWAYS" />
+                            </columnConstraints>
+                            <Label text="Nombre completo:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                            <TextField promptText="Tu nombre" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                            <Label text="Usuario:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                            <TextField promptText="username" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            <Label text="Correo electrónico:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                            <TextField promptText="correo@ejemplo.com" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                            <Label text="Rol:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                            <Label style="-fx-background-color: #E2E2E2; -fx-text-fill: #1F1F1F;                                           -fx-padding: 3 10 3 10; -fx-background-radius: 12;                                           -fx-font-weight: bold; -fx-font-size: 11px;" text="Administrador" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                     </rowConstraints>
+                        </GridPane>
+                        <HBox spacing="10">
+                            <Button style="-fx-background-color: #E0E0E0; -fx-text-fill: #2D2D2D;                                            -fx-font-weight: bold; -fx-background-radius: 4;                                            -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Editar perfil" />
+                            <Button style="-fx-background-color: #ECECEC; -fx-text-fill: #2D2D2D;                                            -fx-border-color: #D0D0D0; -fx-border-width: 1;                                            -fx-background-radius: 4; -fx-border-radius: 4;                                            -fx-padding: 6 14 6 14; -fx-cursor: hand;" text="Cambiar contraseña" />
+                        </HBox>
+                    </VBox>
+                </HBox>
+            </VBox>
+
+        </StackPane>
+    </center>
+
+    <!-- ══════════════════════════════════════════
+         BARRA INFERIOR (Status bar)
+    ══════════════════════════════════════════════ -->
+    <bottom>
+        <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-background-color: #F4F4F4; -fx-border-color: #E0E0E0;                      -fx-border-width: 1 0 0 0; -fx-min-height: 28;">
+            <padding><Insets bottom="5" left="16" right="16" top="5" /></padding>
+            <Region HBox.hgrow="ALWAYS" />
+            <Label style="-fx-text-fill: #999999; -fx-font-size: 11px;" text="SGCM v1.0  |  Soporte Técnico" />
+        </HBox>
+    </bottom>
+
+</BorderPane>

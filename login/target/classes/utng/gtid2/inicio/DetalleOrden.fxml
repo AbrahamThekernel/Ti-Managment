@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="utng.gtid2.inicio.DetalleOrdenController"
+      prefWidth="1000" prefHeight="700"
+      style="-fx-background-color: #EBEBEB; -fx-padding: 20;" spacing="12">
+
+    <Label text="Detalle / Seguimiento de orden"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+    <Separator/>
+
+    <GridPane hgap="16" vgap="10"
+              style="-fx-background-color: white; -fx-padding: 16;
+                     -fx-border-color: #cccccc; -fx-border-width: 1;">
+
+        <Label text="No. Orden:"        style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Label fx:id="lblNumero"                                        GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Label text="Cliente:"          style="-fx-font-weight: bold;" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+        <Label fx:id="lblCliente"                                       GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+        <Label text="Tipo de servicio:" style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <Label fx:id="lblTipo"                                          GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label text="Técnico:"          style="-fx-font-weight: bold;" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+        <Label fx:id="lblTecnico"                                       GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
+        <Label text="Fecha:"            style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <Label fx:id="lblFecha"                                         GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Label text="Estado:"           style="-fx-font-weight: bold;" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+        <Label fx:id="lblEstado"                                        GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+
+        <Label text="Prioridad:"        style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <Label fx:id="lblPrioridad"                                     GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        <Label text="Dirección:"        style="-fx-font-weight: bold;" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+        <Label fx:id="lblDireccion"                                     GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+
+        <Label text="Descripción:"      style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <Label fx:id="lblDescripcion"   wrapText="true"
+               GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.columnSpan="3"/>
+
+        <columnConstraints>
+            <ColumnConstraints minWidth="140" prefWidth="140"/>
+            <ColumnConstraints hgrow="ALWAYS" minWidth="160"/>
+            <ColumnConstraints minWidth="140" prefWidth="140"/>
+            <ColumnConstraints hgrow="ALWAYS" minWidth="160"/>
+        </columnConstraints>
+    </GridPane>
+
+    <HBox spacing="12" VBox.vgrow="ALWAYS">
+        <VBox spacing="6" HBox.hgrow="ALWAYS">
+            <Label text="Materiales utilizados" style="-fx-font-weight: bold;"/>
+            <TableView fx:id="tablaMateriales" VBox.vgrow="ALWAYS"
+                       style="-fx-border-color: #cccccc; -fx-border-width: 1;">
+                <columns>
+                    <TableColumn fx:id="colMatNombre"   text="Material"  prefWidth="200"/>
+                    <TableColumn fx:id="colMatCantidad" text="Cantidad"  prefWidth="90"/>
+                    <TableColumn fx:id="colMatCosto"    text="Costo"     prefWidth="90"/>
+                </columns>
+                <placeholder><Label text="Sin materiales registrados"/></placeholder>
+            </TableView>
+        </VBox>
+
+        <VBox spacing="6" prefWidth="340">
+            <Label text="Bitácora de seguimiento" style="-fx-font-weight: bold;"/>
+            <ListView fx:id="listBitacora" VBox.vgrow="ALWAYS"
+                      style="-fx-border-color: #cccccc; -fx-border-width: 1;"/>
+            <HBox spacing="6">
+                <TextField fx:id="txtNota" promptText="Agregar nota..." HBox.hgrow="ALWAYS"/>
+                <Button text="Agregar" onAction="#onAgregarNota" prefWidth="80"/>
+            </HBox>
+        </VBox>
+    </HBox>
+
+    <HBox spacing="8" alignment="CENTER_RIGHT">
+        <Button text="Regresar"          onAction="#onVolver"           prefWidth="100"/>
+        <Button text="Editar orden"      onAction="#onEditar"           prefWidth="120"/>
+        <Button text="Eliminar orden"    onAction="#onEliminar"         prefWidth="130"/>
+        <Button text="Marcar completada" onAction="#onMarcarCompletada" prefWidth="160"/>
+    </HBox>
+</VBox>
