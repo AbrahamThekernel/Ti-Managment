@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="780.0" prefWidth="1140.0" style="-fx-background-color: #2b2b2b;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid2.cmjam.EquiposController">
+<AnchorPane prefHeight="780.0" prefWidth="1140.0" style="-fx-background-color: #2b2b2b;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid2.inicio.EquiposController">
 
     <BorderPane fx:id="rootPane" layoutX="20.0" layoutY="112.8" prefHeight="647.0" prefWidth="1021.0" style="-fx-background-color: #f3f3f3;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="99.0" AnchorPane.topAnchor="113.0">
 
