@@ -1,4 +1,4 @@
-package utng.gtid232.jjcm;
+package utng.gtid232.inicio;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
