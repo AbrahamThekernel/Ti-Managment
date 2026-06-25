@@ -1,4 +1,4 @@
-package utng.gtid2.inicio;
+package utng.gtid2.jjsh;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
