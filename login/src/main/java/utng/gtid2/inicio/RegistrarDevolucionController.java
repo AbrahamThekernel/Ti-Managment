@@ -7,7 +7,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import utng.gtid2.jjsh.App;
+
 
 public class RegistrarDevolucionController {
 
@@ -21,23 +21,15 @@ public class RegistrarDevolucionController {
     @FXML private Button btnGuardar;
 
     @FXML
-    public void handleBtnGuardar() {
+    public void handleBtnGuardar() throws IOException {
         System.out.println("Guardando devolución... Regresando al menú.");
-        regresarAlMenu();
+        App.setRoot("Menu_Prestamos");
     }
 
+    
     @FXML
-    public void handleBtnCancelar() {
+    private void handleBtnCancelar() throws IOException {
         System.out.println("Cancelando devolución... Regresando al menú.");
-        regresarAlMenu();
-    }
-
-    private void regresarAlMenu() {
-        try {
-            utng.gtid2.jjsh.App.setRoot("Menu_Prestamos");
-        } catch (IOException e) {
-            System.out.println("Error al regresar al menú principal.");
-            e.printStackTrace();
-        }
+        App.setRoot("Menu_Prestamos");
     }
 }
