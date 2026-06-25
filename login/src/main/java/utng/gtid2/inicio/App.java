@@ -15,11 +15,14 @@ public class App extends Application {
 
     private static Scene scene;
 
-    @Override
+   @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("historialRespaldos"), 1350, 1350);
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("MenuPrincipal.fxml"));
+        scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
         stage.show();
+
+
     }
 
     static void setRoot(String fxml) throws IOException {
