@@ -1,10 +1,10 @@
-package utng.gtid232.inicio;
+package utng.gtid2.inicio;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import utng.gtid232.jjcm.App;
+
 
 import java.net.URL;
 import java.util.ResourceBundle;

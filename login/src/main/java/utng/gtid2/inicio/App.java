@@ -38,4 +38,9 @@ public class App extends Application {
         launch();
     }
 
+    public static void navigateTo(String string) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'navigateTo'");
+    }
+
 }
