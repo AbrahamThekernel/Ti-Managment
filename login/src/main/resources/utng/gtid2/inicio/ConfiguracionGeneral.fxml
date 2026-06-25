@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="rootPane" prefHeight="560.0" prefWidth="700.0" style="-fx-background-color: #2b2b2b;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid2.ConfiguracionGeneralController">
+<BorderPane fx:id="rootPane" prefHeight="560.0" prefWidth="700.0" style="-fx-background-color: #2b2b2b;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid2.inicio.ConfiguracionGeneralController">
 
    <!-- ===================== HEADER ===================== -->
    <top>
