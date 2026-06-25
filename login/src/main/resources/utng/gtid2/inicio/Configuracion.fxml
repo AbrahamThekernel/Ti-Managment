@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #2b2b2b;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid2.ConfiguracionController">
+<AnchorPane prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #2b2b2b;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid2.inicio.ConfiguracionController">
 
     <BorderPane fx:id="rootPane" style="-fx-background-color: #f3f3f3;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
 
