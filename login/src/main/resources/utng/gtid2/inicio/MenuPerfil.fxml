@@ -5,7 +5,7 @@
 
 <VBox xmlns="http://javafx.com/javafx/21"
       xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="utng.gtid232.jjcm.MenuPerfilController"
+      fx:controller="utng.gtid2.inicio.MenuPerfilController"
       fx:id="rootPane"
       prefWidth="900" prefHeight="650"
       style="-fx-background-color: #EBEBEB; -fx-padding: 20;" spacing="10">
