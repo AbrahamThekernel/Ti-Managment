@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="utng.gtid2.inicio.EditarMaterialController"
+      prefWidth="700" prefHeight="580"
+      style="-fx-background-color: #EBEBEB; -fx-padding: 20;" spacing="12">
+
+    <Label text="Editar material"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+    <Separator/>
+
+    <GridPane hgap="16" vgap="12"
+              style="-fx-background-color: white; -fx-padding: 20;
+                     -fx-border-color: #cccccc; -fx-border-width: 1;">
+
+        <Label text="Código:"          style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="txtCodigo"   prefWidth="280" editable="false"
+                   style="-fx-background-color: #f0f0f0;"
+                   GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Nombre:"          style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="txtNombre"   prefWidth="280" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Categoría:"       style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <ComboBox fx:id="cmbCategoria" prefWidth="280" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="Unidad:"          style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <ComboBox fx:id="cmbUnidad"    prefWidth="280" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+        <Label text="Stock actual:"    style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <TextField fx:id="txtStock"    prefWidth="280" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+        <Label text="Stock mínimo:"    style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+        <TextField fx:id="txtStockMin" prefWidth="280" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+        <Label text="Precio unitario:" style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+        <TextField fx:id="txtPrecio"   prefWidth="280" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+
+        <Label text="Proveedor:"       style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+        <TextField fx:id="txtProveedor" prefWidth="280" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+
+        <Label text="Descripción:"     style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="8"/>
+        <TextArea fx:id="txtDescripcion"
+                  prefWidth="280" prefHeight="70" wrapText="true"
+                  GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+
+        <columnConstraints>
+            <ColumnConstraints minWidth="140" prefWidth="140"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+    </GridPane>
+
+    <Region VBox.vgrow="ALWAYS"/>
+
+    <HBox spacing="8" alignment="CENTER_RIGHT">
+        <Button text="Cancelar"        onAction="#onCancelar"      prefWidth="100"/>
+        <Button text="Restablecer"     onAction="#onRestablecer"   prefWidth="110"/>
+        <Button text="Guardar cambios" onAction="#onGuardar"       prefWidth="140"/>
+    </HBox>
+</VBox>

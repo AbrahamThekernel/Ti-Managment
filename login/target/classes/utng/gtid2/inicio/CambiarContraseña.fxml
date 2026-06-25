@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="500.0" style="-fx-background-color: #f5f7fa;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid2.inicio.CambiarContraseñaController">
+   <children>
+      <Label layoutX="35.0" layoutY="25.0" text="Cambiar Contraseña" textFill="#2d3748">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      
+      <Label layoutX="45.0" layoutY="104.0" text="ID Usuario:" textFill="#4a5568" />
+      <TextField fx:id="txtIdUsuario" layoutX="180.0" layoutY="100.0" prefHeight="28.0" prefWidth="240.0" style="-fx-background-radius: 4; -fx-border-color: #cbd5e0;" />
+      
+      <Label layoutX="45.0" layoutY="154.0" text="Nueva Contraseña:" textFill="#4a5568" />
+      <TextField fx:id="txtNuevaC" layoutX="180.0" layoutY="150.0" prefHeight="28.0" prefWidth="240.0" style="-fx-background-radius: 4; -fx-border-color: #cbd5e0;" />
+      
+      <Label layoutX="45.0" layoutY="204.0" text="Confirmar Contraseña:" textFill="#4a5568" />
+      <TextField fx:id="txtConfirC" layoutX="180.0" layoutY="200.0" prefHeight="28.0" prefWidth="240.0" style="-fx-background-radius: 4; -fx-border-color: #cbd5e0;" />
+      
+      <Button fx:id="btnGuardar" layoutX="45.0" layoutY="275.0" mnemonicParsing="false" onAction="#handleBtnGuardar" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #38a169; -fx-text-fill: white; -fx-background-radius: 6; -fx-cursor: hand;" text="Guardar" />
+      <Button fx:id="btnCancelar" layoutX="185.0" layoutY="275.0" mnemonicParsing="false" onAction="#handleBtnCancelar" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #e2e8f0; -fx-text-fill: #4a5568; -fx-background-radius: 6; -fx-cursor: hand;" text="Cancelar" />
+   </children>
+</AnchorPane>

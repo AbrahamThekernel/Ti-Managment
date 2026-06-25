@@ -1,10 +1,10 @@
 package utng.gtid2.inicio;
 
 import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import utng.gtid2.jjsh.App;
 
 public class MenuUsuariosController {
 

@@ -1,10 +1,10 @@
-package utng.gtid232.inicio;
+package utng.gtid2.inicio;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
-import utng.gtid232.jjcm.App;
+
 
 /**
  * Controlador para MenuPerfil.fxml
@@ -25,12 +25,12 @@ public class MenuPerfilController {
 
     @FXML
     private void onVerPerfil(ActionEvent event) {
-        App.navigateTo("VerPerfil.fxml");
+    //    App.navigateTo("VerPerfil.fxml");
     }
 
     @FXML
     private void onEditarPerfil(ActionEvent event) {
-        App.navigateTo("EditarPerfil.fxml");
+    //    App.navigateTo("EditarPerfil.fxml");
     }
 
     @FXML
@@ -44,6 +44,6 @@ public class MenuPerfilController {
 
     @FXML
     private void onCerrarSesion(ActionEvent event) {
-        App.navigateTo("CerrarSesion.fxml");
+    //    App.navigateTo("CerrarSesion.fxml");
     }
 }

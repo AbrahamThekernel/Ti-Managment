@@ -1,16 +1,18 @@
-package utng.gtid232.inicio;
-
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.*;
-import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.cell.PropertyValueFactory;
+package utng.gtid2.inicio;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 /**
  * Controlador para ListaInventario.fxml
@@ -52,7 +54,7 @@ public class ListaInventarioController implements Initializable {
 
     /** Carga (o recarga) los datos del repositorio en memoria a la tabla. */
     private void cargarDatos() {
-        tablaInventario.setItems(MaterialDAO.obtenerTodos());
+     //   tablaInventario.setItems(MaterialDAO.obtenerTodos());
     }
 
     // ----------------------------------------------------------------
@@ -69,16 +71,16 @@ public class ListaInventarioController implements Initializable {
             return;
         }
 
-        ObservableList<Material> resultado = FXCollections.observableArrayList();
-        for (Material m : MaterialDAO.obtenerTodos()) {
-            boolean coincide = m.getCodigo().toLowerCase().contains(filtro)
-                    || m.getNombre().toLowerCase().contains(filtro)
-                    || m.getCategoria().toLowerCase().contains(filtro);
-            if (coincide) {
-                resultado.add(m);
-            }
-        }
-        tablaInventario.setItems(resultado);
+        // ObservableList<Material> resultado = FXCollections.observableArrayList();
+        // for (Material m : MaterialDAO.obtenerTodos()) {
+        //     boolean coincide = m.getCodigo().toLowerCase().contains(filtro)
+        //             || m.getNombre().toLowerCase().contains(filtro)
+        //             || m.getCategoria().toLowerCase().contains(filtro);
+        //     if (coincide) {
+        //         resultado.add(m);
+        //     }
+        // }
+        // tablaInventario.setItems(resultado);
     }
 
     @FXML
@@ -89,8 +91,8 @@ public class ListaInventarioController implements Initializable {
 
     @FXML
     private void onAgregar(ActionEvent event) {
-        MaterialDAO.setMaterialSeleccionado(null);
-        Navegacion.navegarA("AgregarMaterial.fxml");
+    //    MaterialDAO.setMaterialSeleccionado(null);
+        // Navegacion.navegarA("AgregarMaterial.fxml");
     }
 
     @FXML
@@ -101,7 +103,7 @@ public class ListaInventarioController implements Initializable {
                     "Selecciona un material de la tabla para ver su detalle.");
             return;
         }
-        MaterialDAO.setMaterialSeleccionado(seleccionado);
+     //   MaterialDAO.setMaterialSeleccionado(seleccionado);
         Navegacion.navegarA("DetalleMaterial.fxml");
     }
 
@@ -113,7 +115,7 @@ public class ListaInventarioController implements Initializable {
                     "Selecciona un material de la tabla para editarlo.");
             return;
         }
-        MaterialDAO.setMaterialSeleccionado(seleccionado);
+    //    MaterialDAO.setMaterialSeleccionado(seleccionado);
         Navegacion.navegarA("EditarMaterial.fxml");
     }
 
@@ -133,7 +135,7 @@ public class ListaInventarioController implements Initializable {
 
         confirmacion.showAndWait().ifPresent(boton -> {
             if (boton == ButtonType.OK) {
-                MaterialDAO.eliminar(seleccionado);
+    //            MaterialDAO.eliminar(seleccionado);
                 cargarDatos();
                 mostrarAlerta(AlertType.INFORMATION, "Material eliminado",
                         "El material se eliminó correctamente.");
