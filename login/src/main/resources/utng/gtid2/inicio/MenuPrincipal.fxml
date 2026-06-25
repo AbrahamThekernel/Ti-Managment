@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="680" prefWidth="1100" style="-fx-background-color: #EBEBEB; -fx-font-family: 'Segoe UI';" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuPrincipalController">
+<BorderPane prefHeight="680" prefWidth="1100" style="-fx-background-color: #EBEBEB; -fx-font-family: 'Segoe UI';" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid2.inicio.MenuPrincipalController">
 
     <!-- ══════════════════════════════════════════
          BARRA SUPERIOR
