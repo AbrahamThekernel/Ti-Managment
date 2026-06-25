@@ -1,19 +1,21 @@
-package utng.gtid2.cmjam;
-
+package utng.gtid2.inicio;
 
 
 import java.io.IOException;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
-public class EquiposBajaController {
+public class EquiposRegistrarController {
 
     @FXML
     private Button btnRegresar;
+
     @FXML
     private Button btnCancelar;
+
     @FXML
-    private Button btnConfirmarBaja;
+    private Button btnGuardarEquipo;
 
     @FXML
 private void regresar() throws IOException {
@@ -22,16 +24,16 @@ private void regresar() throws IOException {
 
     @FXML
     private void cancelar() throws IOException {
-        App.setRoot("Equipos");
+        App.setRoot("EquiposRegistrar");
     }
 
     @FXML
-private void abrirConfirmacion() {
-    try {
+    private void abrirConfirmacion() throws IOException {
         App.setRoot("Confirmacion");
-    } catch (IOException e) {
-        e.printStackTrace();
     }
-}
+
+
+   
+
 
 }

@@ -1,6 +1,7 @@
-package utng.gtid2.cmjam;
+package utng.gtid2.inicio;
 
 import java.io.IOException;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;

@@ -1,4 +1,4 @@
-package utng.gtid2.cmjam;
+package utng.gtid2.inicio;
 
 import java.io.IOException;
 
