@@ -5,7 +5,7 @@
 
 <VBox xmlns="http://javafx.com/javafx/21"
       xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="utng.gtid232.jjcm.CerrarSesionController"
+      fx:controller="utng.gtid2.CerrarSesionController"
       fx:id="rootPane"
       prefWidth="420" prefHeight="220"
       alignment="CENTER"
