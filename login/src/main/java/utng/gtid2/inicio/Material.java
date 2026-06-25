@@ -1,17 +1,9 @@
-package utng.gtid232.inicio;
+package utng.gtid2.inicio;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-/**
- * Modelo de datos para un Material de inventario.
- * Usa StringProperty para ser 100% compatible con TableView + PropertyValueFactory.
- *
- * Ubicación: src/main/java/utng/gtid232/jjcm/Material.java
- *
- * Atributos: id, codigo, nombre, categoria, descripcion, cantidad,
- *            unidadMedida, proveedor, fechaRegistro, estadoStock
- */
+
 public class Material {
 
     private final StringProperty id;

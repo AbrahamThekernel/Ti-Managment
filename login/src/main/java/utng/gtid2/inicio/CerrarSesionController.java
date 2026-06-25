@@ -5,15 +5,7 @@ import javafx.fxml.FXML;
 
 
 
-/**
- * Controlador para CerrarSesion.fxml
- *
- * Ubicación: src/main/java/utng/gtid232/jjcm/CerrarSesionController.java
- *
- * Botones:
- *   - Cancelar              → MenuPerfil.fxml
- *   - Sí, cerrar sesión     → cierra la aplicación
- */
+
 public class CerrarSesionController {
 
     @FXML

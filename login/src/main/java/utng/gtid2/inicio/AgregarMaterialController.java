@@ -1,4 +1,4 @@
-package utng.gtid232.inicio;
+package utng.gtid2.inicio;
 
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
