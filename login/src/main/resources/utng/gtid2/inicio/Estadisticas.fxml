@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane fx:id="rootPane" prefHeight="780.0" prefWidth="1140.0" style="-fx-background-color: #2b2b2b;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid2.cmjam.EstadisticasController">
+<BorderPane fx:id="rootPane" prefHeight="780.0" prefWidth="1140.0" style="-fx-background-color: #2b2b2b;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid2.inicio.EstadisticasController">
    <center>
       <VBox style="-fx-background-color: #f3f3f3;" BorderPane.alignment="CENTER">
          <padding>
