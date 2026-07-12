@@ -11,6 +11,7 @@
 <?import javafx.scene.text.Font?>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <BorderPane xmlns="http://javafx.com/javafx/26"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="utng.gtid2.inicio.Login">
@@ -19,6 +20,10 @@
         <VBox alignment="CENTER" spacing="15">
 =======
 <BorderPane xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="utng.gtid2.inicio.Login" prefWidth="800"  prefHeight="600">
+=======
+<BorderPane xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1"  
+fx:controller="utng.gtid2.inicio.Login" prefWidth="800"  prefHeight="600">
+>>>>>>> 3fe267e (REFACTOR: Agregé CSS)
 
     <center>
         <VBox alignment="CENTER"  spacing="15" maxWidth="400">

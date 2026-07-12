@@ -1,0 +1,135 @@
+
+.root {
+    -fx-background-color: #F4F6FA;
+}
+
+/* Sidebar o barra lateral*/
+.sidebar {
+    -fx-background-color: #213D9B;
+}
+
+/* Botones del menú */
+.menu-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #D8E2FF;
+    -fx-font-size: 14px;
+    -fx-background-radius: 12px;
+    -fx-padding: 12 20 12 20;
+    -fx-cursor: hand;
+}
+
+/* Cuando pasas el mouse por encima de los botones */
+.menu-button:hover {
+    -fx-background-color: #2955D8;
+    -fx-text-fill: white;
+}
+
+/* Botón seleccionado */
+.menu-button-selected {
+    -fx-background-color: #1F74FF;
+    -fx-text-fill: white;
+    -fx-background-radius: 12px;
+}
+
+/* Puntito indicador */
+.menu-indicator {
+    -fx-fill: #34F5C5;
+}
+
+/* Tarjetas */
+.card-blue {
+    -fx-background-color: #2947B8;
+    -fx-background-radius: 20px;
+}
+
+.card-cyan {
+    -fx-background-color: #13A7C8;
+    -fx-background-radius: 20px;
+}
+
+.card-teal {
+    -fx-background-color: #1489B2;
+    -fx-background-radius: 20px;
+}
+
+.card-green {
+    -fx-background-color: #2BCDB7;
+    -fx-background-radius: 20px;
+}
+
+/* Tarjeta de bienvenida */
+.welcome-card {
+    -fx-background-color: linear-gradient(
+        to right,
+        #213D9B,
+        #1D5DAF,
+        #167FBC
+    );
+    -fx-background-radius: 25px;
+}
+
+/* Títulos */
+.title {
+    -fx-text-fill: white;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+}
+
+/* Subtítulos */
+.subtitle {
+    -fx-text-fill: #D6E5FF;
+    -fx-font-size: 15px;
+}
+
+/* Botón turquesa */
+.primary-button {
+    -fx-background-color: #34F5C5;
+    -fx-text-fill: #113366;
+    -fx-background-radius: 30px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: #4DFFD1;
+}
+.card-blue {
+    -fx-background-color: #2947B8;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,.20), 12,0,0,3);
+}
+
+.card-cyan {
+    -fx-background-color: #13A7C8;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,.20), 12,0,0,3);
+}
+
+.card-teal {
+    -fx-background-color: #1489B2;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,.20), 12,0,0,3);
+}
+
+.card-green {
+    -fx-background-color: #2BCDB7;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,.20), 12,0,0,3);
+}
+
+.card-title {
+    -fx-text-fill: #D6E5FF;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.card-number {
+    -fx-text-fill: white;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+.card-subtitle {
+    -fx-text-fill: white;
+    -fx-font-size: 11px;
+}
