@@ -1,6 +1,7 @@
 package utng.gtid2.inicio;
 
 import java.io.IOException;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -12,7 +13,7 @@ public class MenuPrincipalController {
     @FXML private Button btnEstadisticas;
     @FXML private Button btnInventario;
     @FXML private Button btnPrestamos;
-    @FXML private Button btnOrdenes;
+    @FXML private Button btnOrdenesServ;
     @FXML private Button btnMantenimientos;
     @FXML private Button btnEquipos;
     @FXML private Button btnUsuarios;
@@ -43,7 +44,7 @@ public class MenuPrincipalController {
         btnEstadisticas.setDisable(false);
         btnInventario.setDisable(false);
         btnPrestamos.setDisable(false);
-        btnOrdenes.setDisable(false);
+        btnOrdenesServ.setDisable(false);
         btnMantenimientos.setDisable(false);
         btnEquipos.setDisable(false);
         btnUsuarios.setDisable(false);
