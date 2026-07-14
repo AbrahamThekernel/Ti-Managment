@@ -41,7 +41,7 @@ public class Login {
     }
 
         try {
-            App.setRoot("MenuPrincipalV2.fxml");
+            App.setRoot("menuPrincipalDos");
         } catch (Exception e){
             e.printStackTrace();
         }
@@ -60,4 +60,5 @@ public class Login {
             e.printStackTrace();
         }
     }
+
 }
