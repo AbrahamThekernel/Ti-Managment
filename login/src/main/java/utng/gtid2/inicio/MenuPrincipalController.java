@@ -4,17 +4,17 @@ import java.io.IOException;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
 public class MenuPrincipalController {
 
     // Botones del sidebar
     @FXML private Button btnEstadisticas;
-    @FXML private Button btnInventario;
+    @FXML private Button btnGestion;
     @FXML private Button btnPrestamos;
     @FXML private Button btnOrdenesServ;
     @FXML private Button btnMantenimientos;
+    
     @FXML private Button btnEquipos;
     @FXML private Button btnUsuarios;
     @FXML private Button btnReportes;
@@ -22,9 +22,6 @@ public class MenuPrincipalController {
     @FXML private Button btnConfiguracion;
     @FXML private Button btnPerfil;
     @FXML private Button btnCerrarSesion;
-
-    // Label de usuario en la barra superior
-    @FXML private Label lblUsuario;
 
     // Paneles del contenido central
     @FXML private VBox panelEstadisticas;
@@ -42,7 +39,7 @@ public class MenuPrincipalController {
     @FXML
     public void initialize() {
         btnEstadisticas.setDisable(false);
-        btnInventario.setDisable(false);
+        btnGestion.setDisable(false);
         btnPrestamos.setDisable(false);
         btnOrdenesServ.setDisable(false);
         btnMantenimientos.setDisable(false);
@@ -61,6 +58,7 @@ public class MenuPrincipalController {
     private void mostrarEstadisticas() throws IOException {
         App.setRoot("Estadisticas");
     }
+
 
     @FXML
     private void mostrarInventario() throws IOException {
