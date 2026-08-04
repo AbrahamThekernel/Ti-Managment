@@ -13,7 +13,7 @@ public class MenuPrincipalController {
     @FXML private Button btnGestion;
     @FXML private Button btnPrestamos;
     @FXML private Button btnOrdenesServ;
-    @FXML private Button btnMantenimientos;
+    @FXML private Button btnMantenimiento;
     
     @FXML private Button btnEquipos;
     @FXML private Button btnUsuarios;
@@ -42,7 +42,7 @@ public class MenuPrincipalController {
         btnGestion.setDisable(false);
         btnPrestamos.setDisable(false);
         btnOrdenesServ.setDisable(false);
-        btnMantenimientos.setDisable(false);
+        btnMantenimiento.setDisable(false);
         btnEquipos.setDisable(false);
         btnUsuarios.setDisable(false);
         btnReportes.setDisable(false);
