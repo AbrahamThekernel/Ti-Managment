@@ -131,3 +131,27 @@
     -fx-text-fill: white;
     -fx-font-size: 11px;
 }
+
+/* Botón de cerrar sesión */
+.logout-button {
+    /* Mantiene el mismo estilo que .menu-button */
+    -fx-background-color: transparent;
+    -fx-text-fill: #D8E2FF;
+    -fx-font-size: 14px;
+    -fx-background-radius: 12px;
+    -fx-padding: 12px 20px;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* Efecto al pasar el mouse */
+.logout-button:hover {
+    -fx-background-color: #D32F2F;
+    -fx-text-fill: white;
+}
+
+/* Efecto al presionar */
+.logout-button:pressed {
+    -fx-background-color: #B71C1C;
+    -fx-text-fill: white;
+}
