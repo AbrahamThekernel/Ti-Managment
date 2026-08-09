@@ -64,10 +64,35 @@
     );
     -fx-background-radius: 25px;
 }
+
+.menu-login {
+    -fx-background-color: #448cff;
+    -fx-text-fill: white;
+    -fx-background-radius: 12px;
+    -fx-padding: 12px 20px;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.login-background {
+    -fx-background-color: #00239C;
+}
+
+.login-card {
+    -fx-background-color: #00AB84;
+    -fx-background-radius: 28px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,.20), 12,0,0,3);
+}
+
 /* Títulos */
 .title {
     -fx-text-fill: white;
     -fx-font-size: 32px;
+    -fx-font-weight: bold;
+}
+.title-login {
+    -fx-text-fill: rgb(243, 234, 234);
+    -fx-font-size: 42px;
     -fx-font-weight: bold;
 }
 
@@ -79,16 +104,54 @@
 
 /* Botón turquesa */
 .primary-button {
-    -fx-background-color: #34F5C5;
+    -fx-background-color: #00f5b7;
     -fx-text-fill: #113366;
     -fx-background-radius: 30px;
     -fx-font-weight: bold;
     -fx-cursor: hand;
 }
 
+.login-button {
+    -fx-background-color: #006aff;
+    -fx-text-fill: #fbfcff;
+    -fx-background-radius: 30px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.login-button-continue:hover{
+    -fx-background-color: #4af66171;
+    -fx-text-fill: white;
+}
+
+.login-button-exit {
+    -fx-background-color: #006aff;
+    -fx-text-fill: #fbfcff;
+    -fx-background-radius: 30px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.login-button-exit:hover {
+    -fx-background-color: #D32F2F;
+    -fx-text-fill: white;
+}
+
+.logout-button {
+    /* Mantiene el mismo estilo que .menu-button */
+    -fx-background-color: transparent;
+    -fx-text-fill: #D8E2FF;
+    -fx-font-size: 14px;
+    -fx-background-radius: 12px;
+    -fx-padding: 12px 20px;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER_LEFT;
+}
+
 .primary-button:hover {
     -fx-background-color: #4DFFD1;
 }
+
 .card-blue {
     -fx-background-color: #2947B8;
     -fx-background-radius: 20px;
@@ -135,14 +198,14 @@
 /* Botón de cerrar sesión */
 .logout-button {
     /* Mantiene el mismo estilo que .menu-button */
-    -fx-background-color: transparent;
-    -fx-text-fill: #D8E2FF;
+    -fx-text-fill: #fd0b0b;
     -fx-font-size: 14px;
     -fx-background-radius: 12px;
     -fx-padding: 12px 20px;
     -fx-cursor: hand;
     -fx-alignment: CENTER_LEFT;
 }
+
 
 /* Efecto al pasar el mouse */
 .logout-button:hover {

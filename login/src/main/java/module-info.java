@@ -5,3 +5,4 @@ module utng.gtid2.inicio {
     opens utng.gtid2.inicio to javafx.fxml;
     exports utng.gtid2.inicio;
 }
+

@@ -1,7 +1,8 @@
-package utng.gtid2.inicio;
+package utng.gtid2.inicio.DAO;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import utng.gtid2.inicio.OrdenServicio;
 
 /**
  * Repositorio en memoria (simulación de base de datos) para Órdenes de servicio.
@@ -9,7 +10,6 @@ import javafx.collections.ObservableList;
  * para que ListaOrdenes, CrearOrden y DetalleOrden compartan información
  * sin necesidad de una base de datos real.
  *
- * Ubicación: src/main/java/utng/gtid232/jjcm/OrdenServicioDAO.java
  */
 public class OrdenServicioDAO {
 
