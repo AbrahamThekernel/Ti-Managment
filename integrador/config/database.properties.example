@@ -1,0 +1,5 @@
+# Copia este archivo como config/database.properties y completa la contraseña.
+db.url=jdbc:postgresql://localhost:5432/gestion_utng
+db.user=postgres
+db.password=CAMBIA_ESTA_CONTRASENA
+db.initialize=true

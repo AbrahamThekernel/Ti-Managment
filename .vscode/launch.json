@@ -1,0 +1,22 @@
+{
+    // VS Code utiliza esta configuración para ejecutar el proyecto correcto.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "utng.gtid.jjcm/utng.gtid.jjcm.App",
+            "projectName": "integrador"
+        },
+        {
+            "type": "java",
+            "name": "Ejecutar Gestión UTNG",
+            "request": "launch",
+            "mainClass": "utng.gtid.jjcm.App",
+            "projectName": "integrador",
+            "cwd": "${workspaceFolder}\\integrador",
+            "vmArgs": "--enable-native-access=javafx.graphics"
+        }
+    ]
+}

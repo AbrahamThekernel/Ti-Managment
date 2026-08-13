@@ -1,0 +1,5 @@
+# Este archivo contiene la contraseña local de PostgreSQL y nunca debe versionarse.
+config/database.properties
+
+# Maven genera este directorio durante la compilación.
+target/
