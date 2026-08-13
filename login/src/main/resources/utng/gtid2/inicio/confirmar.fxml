@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="utng.gtid2.inicio.Controller.ConfirmacionController"
+      alignment="CENTER"
+      spacing="15"
+      prefWidth="350"
+      prefHeight="200"
+      style="-fx-background-color: white;">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label
+        text="¿Deseas enviar el formulario?"
+        style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <Label
+        text="Verifica que los datos sean correctos antes de continuar."/>
+
+    <Button
+        text="Confirmar"
+        onAction="#handleConfirmar"/>
+
+    <Button
+        text="Cancelar"
+        onAction="#handleCancelar"/>
+
+</VBox>
