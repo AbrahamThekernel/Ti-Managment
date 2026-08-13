@@ -86,8 +86,13 @@
 
 /* Títulos */
 .title {
-    -fx-text-fill: white;
+    -fx-text-fill: rgb(255, 255, 255);
     -fx-font-size: 32px;
+    -fx-font-weight: bold;
+}
+.title-topbar {
+    -fx-text-fill: rgb(18, 18, 18);
+    -fx-font-size: 22px;
     -fx-font-weight: bold;
 }
 .title-login {

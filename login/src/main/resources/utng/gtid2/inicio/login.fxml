@@ -11,10 +11,10 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="600" prefWidth="800" styleClass="login-background" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/25.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid2.inicio.Login">
+<BorderPane prefHeight="600" prefWidth="800" styleClass="login-background" xmlns="http://javafx.com/javafx/25.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid2.inicio.Login">
 
     <center>
-        <VBox alignment="CENTER" maxWidth="420.0" prefHeight="400.0" prefWidth="200.0" spacing="15" styleClass="login-card" BorderPane.alignment="CENTER">
+        <VBox alignment="CENTER" maxWidth="574.0" prefHeight="524.0" prefWidth="574.0" spacing="15" styleClass="login-card" BorderPane.alignment="CENTER">
          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="472.0">
             <children>
       
@@ -61,7 +61,7 @@
             </HBox>
          <HBox prefHeight="68.0" prefWidth="440.0">
             <children>
-               <VBox alignment="CENTER" prefHeight="68.0" prefWidth="431.0">
+               <VBox alignment="CENTER" prefHeight="68.0" prefWidth="581.0">
                   <children>
             
                               <Label text="¿OLVIDÓ SU CONTRASEÑA?" textFill="WHITE">

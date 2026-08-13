@@ -55,7 +55,7 @@ public class Login {
     @FXML
     private void reestablecer(){
         try {
-            App.setRoot("recuperar_cuenta");
+            App.setRoot("recuperar-cuenta");
         } catch (Exception e){
             e.printStackTrace();
         }

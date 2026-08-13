@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #f7f7f7; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px;" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <VBox prefWidth="215.0" minWidth="215.0" maxWidth="215.0" spacing="5.0" style="-fx-background-color: white; -fx-border-color: transparent #d7d7d7 transparent transparent; -fx-border-width: 0 1 0 0;">
+         <padding><Insets top="14.0" right="12.0" bottom="14.0" left="12.0" /></padding>
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="10.0"><children><StackPane prefHeight="38.0" prefWidth="38.0" minHeight="38.0" minWidth="38.0" style="-fx-background-color: #eeeeee; -fx-border-color: #bcbcbc;"><children><Label text="◇" style="-fx-font-size: 23px; -fx-text-fill: #9a9a9a;" /></children></StackPane><VBox spacing="1.0"><children><Label text="UTNG" style="-fx-font-size: 16px; -fx-font-weight: bold;" /><Label text="Gestión Institucional" style="-fx-font-size: 9px; -fx-text-fill: #666666;" /></children></VBox></children></HBox>
+            <TextField fx:id="txtBuscarModulo" promptText="⌕  Buscar módulo..." prefHeight="31.0" style="-fx-background-color: white; -fx-border-color: #d4d4d4; -fx-border-radius: 3; -fx-background-radius: 3; -fx-prompt-text-fill: #999999;"><VBox.margin><Insets top="7.0" /></VBox.margin></TextField>
+            <Label text="MENÚ PRINCIPAL" style="-fx-font-size: 9px; -fx-text-fill: #888888;"><VBox.margin><Insets top="5.0" left="4.0" /></VBox.margin></Label>
+            <Button fx:id="btnEstadisticas" text="▥   Estadísticas" prefHeight="31.0" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-alignment: CENTER_LEFT;" />
+            <Button fx:id="btnInventario" text="◇   Inventario" prefHeight="31.0" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-alignment: CENTER_LEFT;" />
+            <Button fx:id="btnPrestamos" text="▣   Préstamos" prefHeight="31.0" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-alignment: CENTER_LEFT;" />
+            <Button fx:id="btnOrdenesServicio" text="▧   Órdenes de servicio" prefHeight="31.0" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-alignment: CENTER_LEFT;" />
+            <Button fx:id="btnMantenimientos" text="⌕   Mantenimientos" prefHeight="31.0" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-alignment: CENTER_LEFT;" />
+            <Button fx:id="btnEquipos" text="▱   Equipos" prefHeight="31.0" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-alignment: CENTER_LEFT;" />
+            <Button fx:id="btnUsuarios" text="♙   Usuarios" prefHeight="31.0" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-alignment: CENTER_LEFT;" />
+            <Button fx:id="btnReportes" text="▤   Reportes" prefHeight="31.0" maxWidth="Infinity" style="-fx-background-color: #e9e9e9; -fx-border-color: #d3d3d3; -fx-background-radius: 3; -fx-border-radius: 3; -fx-alignment: CENTER_LEFT; -fx-font-weight: bold;" />
+            <Button fx:id="btnRespaldos" text="▦   Respaldos" prefHeight="31.0" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-alignment: CENTER_LEFT;" />
+            <Separator><VBox.margin><Insets top="7.0" bottom="7.0" /></VBox.margin></Separator>
+            <Button fx:id="btnPerfil" text="◎   Mi perfil" prefHeight="31.0" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-alignment: CENTER_LEFT;" />
+            <Button fx:id="btnCerrarSesion" text="↪   Cerrar sesión" prefHeight="31.0" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-alignment: CENTER_LEFT;" />
+            <Region VBox.vgrow="ALWAYS" />
+            <Separator><VBox.margin><Insets bottom="9.0" /></VBox.margin></Separator>
+            <HBox alignment="CENTER_LEFT" spacing="10.0"><children><StackPane prefHeight="34.0" prefWidth="34.0" minHeight="34.0" minWidth="34.0" style="-fx-background-color: #d8d8d8; -fx-background-radius: 20;" /><VBox spacing="1.0"><children><Label text="Dr. A. Herrera" style="-fx-font-size: 10px; -fx-font-weight: bold;" /><Label text="Administrador" style="-fx-font-size: 9px; -fx-text-fill: #666666;" /></children></VBox><Region HBox.hgrow="ALWAYS" /><Label text="●" style="-fx-text-fill: #999999; -fx-font-size: 8px;" /></children></HBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <BorderPane>
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="74.0" spacing="12.0" style="-fx-background-color: white; -fx-border-color: transparent transparent #dddddd transparent; -fx-border-width: 0 0 1 0;">
+               <padding><Insets top="9.0" right="18.0" bottom="9.0" left="18.0" /></padding>
+               <children><Button fx:id="btnMenu" text="☰" style="-fx-background-color: transparent; -fx-font-size: 19px; -fx-text-fill: #666666;" /><VBox spacing="3.0"><children><Label text="Inicio   ›   Reportes" style="-fx-font-size: 9px; -fx-text-fill: #888888;" /><Label text="Reportes" style="-fx-font-size: 17px; -fx-font-weight: bold;" /></children></VBox><Region HBox.hgrow="ALWAYS" /><StackPane prefHeight="31.0" prefWidth="31.0" minHeight="31.0" minWidth="31.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 20;" /><Button fx:id="btnNotificaciones" text="♧" style="-fx-background-color: transparent; -fx-font-size: 18px; -fx-text-fill: #666666;" /></children>
+            </HBox>
+         </top>
+         <center>
+            <VBox spacing="12.0" style="-fx-background-color: #f7f7f7;">
+               <padding><Insets top="14.0" right="18.0" bottom="16.0" left="18.0" /></padding>
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="8.0"><children><Label text="Periodo:" style="-fx-font-weight: bold;" /><Button fx:id="btnPeriodoMes" text="Este mes" style="-fx-background-color: #e8e8e8; -fx-border-color: #d0d0d0; -fx-border-radius: 4; -fx-background-radius: 4; -fx-font-weight: bold;" /><Button fx:id="btnPeriodoTrimestre" text="Trimestre" style="-fx-background-color: white; -fx-border-color: #d0d0d0; -fx-border-radius: 4; -fx-background-radius: 4;" /><Button fx:id="btnPeriodoAnio" text="Este año" style="-fx-background-color: white; -fx-border-color: #d0d0d0; -fx-border-radius: 4; -fx-background-radius: 4;" /><Region prefWidth="20.0" /><TextField fx:id="txtFechaInicio" promptText="Fecha inicial" prefWidth="125.0" style="-fx-background-color: white; -fx-border-color: #d3d3d3; -fx-border-radius: 4; -fx-background-radius: 4;" /><Label text="—" /><TextField fx:id="txtFechaFin" promptText="Fecha final" prefWidth="125.0" style="-fx-background-color: white; -fx-border-color: #d3d3d3; -fx-border-radius: 4; -fx-background-radius: 4;" /><Region HBox.hgrow="ALWAYS" /><Button fx:id="btnExportarTodos" text="Exportar todos" style="-fx-background-color: #eeeeee; -fx-border-color: #cecece; -fx-border-radius: 4; -fx-background-radius: 4; -fx-font-weight: bold;" /></children></HBox>
+                  <HBox spacing="12.0" prefHeight="92.0">
+                     <children>
+                        <VBox maxWidth="Infinity" HBox.hgrow="ALWAYS" spacing="3.0" style="-fx-background-color: white; -fx-border-color: #d4d4d4; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 12;"><children><Label text="REPORTES GENERADOS" style="-fx-font-size: 9px;" /><Label text="48" style="-fx-font-size: 22px; -fx-font-weight: bold;" /><Label text="Durante este mes" style="-fx-font-size: 9px; -fx-text-fill: #666666;" /></children></VBox>
+                        <VBox maxWidth="Infinity" HBox.hgrow="ALWAYS" spacing="3.0" style="-fx-background-color: white; -fx-border-color: #d4d4d4; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 12;"><children><Label text="PROGRAMADOS" style="-fx-font-size: 9px;" /><Label text="6" style="-fx-font-size: 22px; -fx-font-weight: bold;" /><Label text="Próxima ejecución: mañana" style="-fx-font-size: 9px; -fx-text-fill: #666666;" /></children></VBox>
+                        <VBox maxWidth="Infinity" HBox.hgrow="ALWAYS" spacing="3.0" style="-fx-background-color: white; -fx-border-color: #d4d4d4; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 12;"><children><Label text="DESCARGAS" style="-fx-font-size: 9px;" /><Label text="127" style="-fx-font-size: 22px; -fx-font-weight: bold;" /><Label text="⌁  +18 este mes" style="-fx-font-size: 9px; -fx-text-fill: #666666;" /></children></VBox>
+                        <VBox maxWidth="Infinity" HBox.hgrow="ALWAYS" spacing="3.0" style="-fx-background-color: white; -fx-border-color: #d4d4d4; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 12;"><children><Label text="ÚLTIMA ACTUALIZACIÓN" style="-fx-font-size: 9px;" /><Label text="Hoy" style="-fx-font-size: 22px; -fx-font-weight: bold;" /><Label text="09:30 horas" style="-fx-font-size: 9px; -fx-text-fill: #666666;" /></children></VBox>
+                     </children>
+                  </HBox>
+                  <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #d1d1d1; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 12;">
+                     <children>
+                        <Label text="Generar reporte" style="-fx-font-size: 11px; -fx-font-weight: bold;" />
+                        <HBox spacing="12.0">
+                           <children>
+                              <VBox maxWidth="Infinity" HBox.hgrow="ALWAYS" spacing="5.0" style="-fx-background-color: #f5f5f5; -fx-border-color: #d5d5d5; -fx-border-radius: 4; -fx-background-radius: 4; -fx-padding: 11;"><children><Label text="▱  Inventario y equipos" style="-fx-font-size: 11px; -fx-font-weight: bold;" /><Label text="Existencias, asignaciones y estado de equipos." wrapText="true" style="-fx-font-size: 9px; -fx-text-fill: #666666;" /><Region VBox.vgrow="ALWAYS" /><Button fx:id="btnGenerarInventario" text="Generar reporte" maxWidth="Infinity" style="-fx-background-color: white; -fx-border-color: #cfcfcf; -fx-border-radius: 3; -fx-background-radius: 3;" /></children></VBox>
+                              <VBox maxWidth="Infinity" HBox.hgrow="ALWAYS" spacing="5.0" style="-fx-background-color: #f5f5f5; -fx-border-color: #d5d5d5; -fx-border-radius: 4; -fx-background-radius: 4; -fx-padding: 11;"><children><Label text="▣  Préstamos" style="-fx-font-size: 11px; -fx-font-weight: bold;" /><Label text="Préstamos activos, devoluciones y retrasos." wrapText="true" style="-fx-font-size: 9px; -fx-text-fill: #666666;" /><Region VBox.vgrow="ALWAYS" /><Button fx:id="btnGenerarPrestamos" text="Generar reporte" maxWidth="Infinity" style="-fx-background-color: white; -fx-border-color: #cfcfcf; -fx-border-radius: 3; -fx-background-radius: 3;" /></children></VBox>
+                              <VBox maxWidth="Infinity" HBox.hgrow="ALWAYS" spacing="5.0" style="-fx-background-color: #f5f5f5; -fx-border-color: #d5d5d5; -fx-border-radius: 4; -fx-background-radius: 4; -fx-padding: 11;"><children><Label text="▧  Órdenes de servicio" style="-fx-font-size: 11px; -fx-font-weight: bold;" /><Label text="Órdenes abiertas, cerradas y tiempos de atención." wrapText="true" style="-fx-font-size: 9px; -fx-text-fill: #666666;" /><Region VBox.vgrow="ALWAYS" /><Button fx:id="btnGenerarOrdenes" text="Generar reporte" maxWidth="Infinity" style="-fx-background-color: white; -fx-border-color: #cfcfcf; -fx-border-radius: 3; -fx-background-radius: 3;" /></children></VBox>
+                           </children>
+                        </HBox>
+                        <HBox spacing="12.0">
+                           <children>
+                              <VBox maxWidth="Infinity" HBox.hgrow="ALWAYS" spacing="5.0" style="-fx-background-color: #f5f5f5; -fx-border-color: #d5d5d5; -fx-border-radius: 4; -fx-background-radius: 4; -fx-padding: 11;"><children><Label text="⌕  Mantenimientos" style="-fx-font-size: 11px; -fx-font-weight: bold;" /><Label text="Servicios preventivos, correctivos y costos." wrapText="true" style="-fx-font-size: 9px; -fx-text-fill: #666666;" /><Region VBox.vgrow="ALWAYS" /><Button fx:id="btnGenerarMantenimientos" text="Generar reporte" maxWidth="Infinity" style="-fx-background-color: white; -fx-border-color: #cfcfcf; -fx-border-radius: 3; -fx-background-radius: 3;" /></children></VBox>
+                              <VBox maxWidth="Infinity" HBox.hgrow="ALWAYS" spacing="5.0" style="-fx-background-color: #f5f5f5; -fx-border-color: #d5d5d5; -fx-border-radius: 4; -fx-background-radius: 4; -fx-padding: 11;"><children><Label text="♙  Usuarios" style="-fx-font-size: 11px; -fx-font-weight: bold;" /><Label text="Usuarios activos, roles y actividad del sistema." wrapText="true" style="-fx-font-size: 9px; -fx-text-fill: #666666;" /><Region VBox.vgrow="ALWAYS" /><Button fx:id="btnGenerarUsuarios" text="Generar reporte" maxWidth="Infinity" style="-fx-background-color: white; -fx-border-color: #cfcfcf; -fx-border-radius: 3; -fx-background-radius: 3;" /></children></VBox>
+                              <VBox maxWidth="Infinity" HBox.hgrow="ALWAYS" spacing="5.0" style="-fx-background-color: #f5f5f5; -fx-border-color: #d5d5d5; -fx-border-radius: 4; -fx-background-radius: 4; -fx-padding: 11;"><children><Label text="▦  Auditoría" style="-fx-font-size: 11px; -fx-font-weight: bold;" /><Label text="Accesos, movimientos y cambios realizados." wrapText="true" style="-fx-font-size: 9px; -fx-text-fill: #666666;" /><Region VBox.vgrow="ALWAYS" /><Button fx:id="btnGenerarAuditoria" text="Generar reporte" maxWidth="Infinity" style="-fx-background-color: white; -fx-border-color: #cfcfcf; -fx-border-radius: 3; -fx-background-radius: 3;" /></children></VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox VBox.vgrow="ALWAYS" style="-fx-background-color: white; -fx-border-color: #cfcfcf; -fx-border-radius: 5; -fx-background-radius: 5;">
+                     <children>
+                        <Label text="Reportes recientes" prefHeight="38.0" maxWidth="Infinity" style="-fx-padding: 0 11; -fx-alignment: CENTER_LEFT; -fx-font-size: 11px; -fx-font-weight: bold; -fx-border-color: transparent transparent #d6d6d6 transparent;" />
+                        <HBox prefHeight="34.0" style="-fx-background-color: #f0f0f0;"><children><Label text="NOMBRE" prefWidth="340.0" maxHeight="Infinity" style="-fx-alignment: CENTER; -fx-font-size: 8px; -fx-font-weight: bold;" /><Label text="GENERADO POR" prefWidth="210.0" maxHeight="Infinity" style="-fx-alignment: CENTER; -fx-font-size: 8px; -fx-font-weight: bold;" /><Label text="FECHA" prefWidth="180.0" maxHeight="Infinity" style="-fx-alignment: CENTER; -fx-font-size: 8px; -fx-font-weight: bold;" /><Label text="FORMATO" prefWidth="140.0" maxHeight="Infinity" style="-fx-alignment: CENTER; -fx-font-size: 8px; -fx-font-weight: bold;" /><Label text="ACCIÓN" maxWidth="Infinity" HBox.hgrow="ALWAYS" maxHeight="Infinity" style="-fx-alignment: CENTER; -fx-font-size: 8px; -fx-font-weight: bold;" /></children></HBox>
+                        <HBox prefHeight="42.0" alignment="CENTER_LEFT" style="-fx-border-color: transparent transparent #dedede transparent;"><children><Label text="Reporte de inventario - Julio 2026" prefWidth="340.0" style="-fx-padding: 0 14; -fx-font-size: 9px;" /><Label text="Dr. A. Herrera" prefWidth="210.0" style="-fx-font-size: 9px;" /><Label text="01/07/2026 09:30" prefWidth="180.0" style="-fx-font-size: 9px;" /><Label text="PDF" prefWidth="140.0" style="-fx-font-size: 9px;" /><Button fx:id="btnDescargarReporte1" text="Descargar" HBox.hgrow="ALWAYS" style="-fx-background-color: white; -fx-border-color: #d0d0d0; -fx-font-size: 9px;" /></children></HBox>
+                        <HBox prefHeight="42.0" alignment="CENTER_LEFT"><children><Label text="Préstamos y devoluciones - Junio 2026" prefWidth="340.0" style="-fx-padding: 0 14; -fx-font-size: 9px;" /><Label text="Dr. A. Herrera" prefWidth="210.0" style="-fx-font-size: 9px;" /><Label text="30/06/2026 16:10" prefWidth="180.0" style="-fx-font-size: 9px;" /><Label text="XLSX" prefWidth="140.0" style="-fx-font-size: 9px;" /><Button fx:id="btnDescargarReporte2" text="Descargar" HBox.hgrow="ALWAYS" style="-fx-background-color: white; -fx-border-color: #d0d0d0; -fx-font-size: 9px;" /></children></HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>
