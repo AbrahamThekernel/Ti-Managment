@@ -3,12 +3,14 @@ package utng.gtid.jjcm;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import utng.gtid.jjcm.database.DatabaseException;
 import utng.gtid.jjcm.model.UserView;
 import utng.gtid.jjcm.repository.UserRepository;
 import utng.gtid.jjcm.security.PasswordHasher;
+import utng.gtid.jjcm.session.SessionContext;
 
 /**
  * Controlador del perfil del administrador utilizado por la sesión actual.
@@ -28,6 +30,11 @@ public class MiPerfilController extends NavigationController {
     @FXML private TextField txtTelefono;
     @FXML private TextField txtPuesto;
     @FXML private TextField txtDepartamento;
+
+    /** Datos visibles en la tarjeta izquierda del perfil. */
+    @FXML private Label lblNombrePerfil;
+    @FXML private Label lblRolPerfil;
+    @FXML private Label lblCorreoPerfil;
 
     /** Campos de contraseña; PasswordField oculta los caracteres escritos. */
     @FXML private PasswordField txtContrasenaActual;
@@ -72,16 +79,32 @@ public class MiPerfilController extends NavigationController {
         loadProfile();
     }
 
-    /** Consulta el administrador activo y llena todos los campos. */
+    /** Consulta la cuenta autenticada y llena todos los campos. */
     private void loadProfile() {
         try {
-            currentUser = userRepository.findDefaultAdministrator();
+            Long sessionUserId = SessionContext.getUserId();
+            if (sessionUserId == null) {
+                throw new DatabaseException("No existe una sesión activa.");
+            }
+
+            currentUser = userRepository.findById(sessionUserId);
             txtNombre.setText(currentUser.getName());
             txtApellidos.setText(currentUser.getLastName());
             txtCorreo.setText(currentUser.getEmail());
             txtTelefono.setText(currentUser.getPhone());
             txtPuesto.setText(currentUser.getPosition());
             txtDepartamento.setText(currentUser.getDepartment());
+
+            // La tarjeta y el pie del menú muestran la misma cuenta autenticada.
+            lblNombrePerfil.setText(currentUser.getFullName());
+            lblRolPerfil.setText(currentUser.getRole());
+            lblCorreoPerfil.setText(currentUser.getEmail());
+            SessionContext.updateIdentity(
+                    currentUser.getName(),
+                    currentUser.getLastName(),
+                    currentUser.getRole()
+            );
+            actualizarIdentidadSesion();
             setEditing(false);
         } catch (DatabaseException error) {
             showError("No se pudo cargar el perfil", error.getMessage());

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
@@ -12,7 +15,6 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
-<?import javafx.scene.shape.Polyline?>
 
 <BorderPane prefHeight="768.0" prefWidth="1366.0"
             style="-fx-background-color: #f7f7f7; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px;"
@@ -66,8 +68,8 @@
                   <StackPane prefHeight="34.0" prefWidth="34.0" minHeight="34.0" minWidth="34.0" style="-fx-background-color: #d8d8d8; -fx-background-radius: 20;" />
                   <VBox spacing="1.0">
                      <children>
-                        <Label text="Dr. A. Herrera" style="-fx-font-size: 10px; -fx-font-weight: bold;" />
-                        <Label text="Administrador" style="-fx-font-size: 9px; -fx-text-fill: #666666;" />
+                        <Label fx:id="lblNombreSesion" text="Usuario" style="-fx-font-size: 10px; -fx-font-weight: bold;" />
+                        <Label fx:id="lblRolSesion" text="Rol" style="-fx-font-size: 9px; -fx-text-fill: #666666;" />
                      </children>
                   </VBox>
                   <Region HBox.hgrow="ALWAYS" />
@@ -92,8 +94,6 @@
                      </children>
                   </VBox>
                   <Region HBox.hgrow="ALWAYS" />
-                  <StackPane prefHeight="31.0" prefWidth="31.0" minHeight="31.0" minWidth="31.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 20;" />
-                  <Button fx:id="btnNotificaciones" text="♧" style="-fx-background-color: transparent; -fx-font-size: 18px; -fx-text-fill: #666666;" />
                </children>
             </HBox>
          </top>
@@ -144,21 +144,16 @@
                               <Button fx:id="btnSeleccionarAnio" text="2026  ⌄" style="-fx-background-color: white; -fx-border-color: #d4d4d4; -fx-border-radius: 3; -fx-background-radius: 3;" />
                            </children>
                         </HBox>
-                        <Pane minHeight="210.0" VBox.vgrow="ALWAYS">
-                           <children>
-                              <Line startX="50.0" startY="25.0" endX="950.0" endY="25.0" stroke="#e0e0e0" />
-                              <Line startX="50.0" startY="90.0" endX="950.0" endY="90.0" stroke="#e0e0e0" />
-                              <Line startX="50.0" startY="155.0" endX="950.0" endY="155.0" stroke="#e0e0e0" />
-                              <Polyline points="50,100,190,68,330,115,470,80,610,116,750,64,890,94" fill="TRANSPARENT" stroke="#777777" strokeWidth="1.5" />
-                              <Polyline points="50,135,190,118,330,64,470,126,610,83,750,118,890,96" fill="TRANSPARENT" stroke="#b0b0b0" strokeWidth="1.5" />
-                              <Label text="100" layoutX="16.0" layoutY="16.0" style="-fx-font-size: 9px;" />
-                              <Label text="50" layoutX="23.0" layoutY="82.0" style="-fx-font-size: 9px;" />
-                              <Label text="0" layoutX="29.0" layoutY="147.0" style="-fx-font-size: 9px;" />
-                              <Label text="Ene        Feb        Mar        Abr        May        Jun        Jul" layoutX="82.0" layoutY="172.0" style="-fx-font-size: 9px;" />
-                              <Label text="—  Préstamos" layoutX="975.0" layoutY="66.0" style="-fx-font-size: 9px;" />
-                              <Label text="—  Devoluciones" layoutX="975.0" layoutY="92.0" style="-fx-font-size: 9px; -fx-text-fill: #777777;" />
-                           </children>
-                        </Pane>
+                        <BarChart fx:id="graficaPrestamos" animated="false" legendVisible="true"
+                                  categoryGap="18.0" barGap="4.0" minHeight="210.0"
+                                  maxWidth="Infinity" VBox.vgrow="ALWAYS">
+                           <xAxis>
+                              <CategoryAxis label="Mes" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis label="Cantidad" forceZeroInRange="true" minorTickVisible="false" />
+                           </yAxis>
+                        </BarChart>
                      </children>
                   </VBox>
                </children>

@@ -35,7 +35,7 @@
             <Button fx:id="btnCerrarSesion" onAction="#cerrarSesion" text="↪   Cerrar sesión" prefHeight="31.0" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-alignment: CENTER_LEFT;" />
             <Region VBox.vgrow="ALWAYS" />
             <Separator><VBox.margin><Insets bottom="9.0" /></VBox.margin></Separator>
-            <HBox alignment="CENTER_LEFT" spacing="10.0"><children><StackPane prefHeight="34.0" prefWidth="34.0" minHeight="34.0" minWidth="34.0" style="-fx-background-color: #d8d8d8; -fx-background-radius: 20;" /><VBox spacing="1.0"><children><Label text="Dr. A. Herrera" style="-fx-font-size: 10px; -fx-font-weight: bold;" /><Label text="Administrador" style="-fx-font-size: 9px; -fx-text-fill: #666666;" /></children></VBox><Region HBox.hgrow="ALWAYS" /><Label text="●" style="-fx-text-fill: #999999; -fx-font-size: 8px;" /></children></HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0"><children><StackPane prefHeight="34.0" prefWidth="34.0" minHeight="34.0" minWidth="34.0" style="-fx-background-color: #d8d8d8; -fx-background-radius: 20;" /><VBox spacing="1.0"><children><Label fx:id="lblNombreSesion" text="Usuario" style="-fx-font-size: 10px; -fx-font-weight: bold;" /><Label fx:id="lblRolSesion" text="Rol" style="-fx-font-size: 9px; -fx-text-fill: #666666;" /></children></VBox><Region HBox.hgrow="ALWAYS" /><Label text="●" style="-fx-text-fill: #999999; -fx-font-size: 8px;" /></children></HBox>
          </children>
       </VBox>
    </left>

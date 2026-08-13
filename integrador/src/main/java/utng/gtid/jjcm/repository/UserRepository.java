@@ -32,6 +32,12 @@ public final class UserRepository {
             + "FROM usuarios u JOIN roles r ON r.id = u.rol_id "
             + "ORDER BY u.nombre, u.apellidos";
 
+    /** Consulta un usuario concreto para que Mi perfil respete la sesión. */
+    private static final String FIND_BY_ID_SQL =
+            "SELECT " + USER_COLUMNS
+            + "FROM usuarios u JOIN roles r ON r.id = u.rol_id "
+            + "WHERE u.id = ?";
+
     /** Consulta del administrador que representa la sesión provisional. */
     private static final String FIND_ADMIN_SQL =
             "SELECT " + USER_COLUMNS
@@ -80,6 +86,22 @@ public final class UserRepository {
             return users;
         } catch (SQLException error) {
             throw new DatabaseException("No se pudieron consultar los usuarios.", error);
+        }
+    }
+
+    /** Recupera la cuenta que realmente inició sesión, no un alias fijo. */
+    public UserView findById(long id) {
+        try (Connection connection = Database.getConnection();
+             PreparedStatement statement = connection.prepareStatement(FIND_BY_ID_SQL)) {
+            statement.setLong(1, id);
+            try (ResultSet result = statement.executeQuery()) {
+                if (result.next()) {
+                    return mapUser(result);
+                }
+                throw new DatabaseException("El usuario de la sesión ya no existe.");
+            }
+        } catch (SQLException error) {
+            throw new DatabaseException("No se pudo consultar el perfil de la sesión.", error);
         }
     }
 
