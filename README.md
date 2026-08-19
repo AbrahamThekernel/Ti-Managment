@@ -8,15 +8,15 @@
 
 **Área:** Tecnologías de la Información
 
-**Institución:** [Nombre de la institución]
+**Institución:** UNIVERSIDAD TECNOLOGICA DEL NORTE DE GUANAJUATO
 
-**Materia:** [Nombre de la materia]
+**Materia:** PROYECTO INTEGRADOR 1
 
-**Docente:** [Nombre del docente]
+**Docente:** VICTOR NOEL GARCIA VALENCIA
 
-**Grupo:** [Grupo]
+**Grupo:** GTID232
 
-**Fecha:** [Fecha de entrega]
+**Fecha:** 19-08-2026
 
 ---
 
@@ -118,15 +118,12 @@ El proyecto puede evolucionar posteriormente mediante la incorporación de nueva
 
 Las tecnologías utilizadas en el proyecto son las siguientes:
 
-- [Lenguaje de programación]
-- [Framework utilizado]
-- [Base de datos]
+- Java, CSS, SQL y FXML
+- Framework utilizado
+- PostgreSQL
 - Git
 - GitHub
-- [IDE utilizado]
-- [Otras tecnologías utilizadas]
-
-> Sustituir los elementos entre corchetes por las tecnologías reales utilizadas en el proyecto.
+- VISUAL STUDIO DE MICROSOFT
 
 ---
 
@@ -136,10 +133,9 @@ Para ejecutar el proyecto se requiere contar con:
 
 - Sistema operativo compatible.
 - Git.
-- [Lenguaje de programación y versión].
-- [Servidor o entorno requerido].
-- [Sistema gestor de base de datos].
-- [Dependencias necesarias].
+- [Java JDK version 21 o superior].
+- [Se ejecutara de manera local].
+- [Se requiere de PostgreSQL].
 - Conexión a Internet para descargar dependencias, si es necesario.
 
 ---
