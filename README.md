@@ -24,10 +24,10 @@
 
 | Nombre | Rol |
 |---|---|
-| [Nombre del integrante 1] | Desarrollo |
-| [Nombre del integrante 2] | Desarrollo |
-| [Nombre del integrante 3] | Desarrollo |
-| [Nombre del integrante 4] | Desarrollo / Documentación |
+| [CITLALLI] | Desarrollo |
+| [MAR] | Desarrollo |
+| [JESUS] | Desarrollo / Base de Datos |
+| [ABRAHAM] | Desarrollo / Documentación |
 
 ---
 
@@ -151,4 +151,4 @@ Para ejecutar el proyecto se requiere contar con:
 Abrir una terminal y ejecutar:
 
 ```bash
-git clone [URL_DEL_REPOSITORIO]
+git clone https://github.com/AbrahamThekernel/Ti-Managment/tree/master
